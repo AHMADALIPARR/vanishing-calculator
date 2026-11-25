@@ -10,6 +10,15 @@ name: CI
 on: [push, pull_request]
 
 jobs:
+  zero-py:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail closed on any Python file or invocation
+        run: |
+          if find . \( -name .git -o -name .lake -o -name .pipeline-work \) -prune -o -name '*.py' -print | grep -q .; then echo "FAIL: Python file present" >&2; exit 1; fi
+          if grep -rnE '(^|[^A-Za-z0-9_])p''ython3?([^A-Za-z0-9_]|$)' --include='*.sh' --include='*.yml' --include='*.exs' --include='*.rkt' --include='Makefile' . --exclude-dir=.git --exclude-dir=.lake --exclude-dir=.pipeline-work | grep -q .; then echo "FAIL: Python invocation in runnable file" >&2; exit 1; fi
+
   verify:
     runs-on: ubuntu-24.04
     steps:

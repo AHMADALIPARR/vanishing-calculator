@@ -29,6 +29,11 @@ RACKET="$HOME/workspace/.tools/racket/bin/racket"
 export PATH="$HOME/workspace/.tools/racket/bin:$HOME/.elan/bin:$PATH"
 export ELIXIR_ERL_OPTIONS="+fnu"
 
+# Zero-Python gate: fail closed if any Python file or invocation enters the tree.
+# The word is split as p''ython so the check does not match its own line.
+if find "$ROOT" \( -name .git -o -name .lake -o -name .pipeline-work \) -prune -o -name '*.py' -print | grep -q .; then echo "FAIL: Python file present" >&2; exit 1; fi
+if grep -rnE '(^|[^A-Za-z0-9_])p''ython3?([^A-Za-z0-9_]|$)' --include='*.sh' --include='*.yml' --include='*.exs' --include='*.rkt' --include='Makefile' "$ROOT" --exclude-dir=.git --exclude-dir=.lake --exclude-dir=.pipeline-work | grep -q .; then echo "FAIL: Python invocation in runnable file" >&2; exit 1; fi
+
 FAILURES=0
 say() { printf '%s\n' "$*"; }
 note() { printf '  %s\n' "$*"; }
@@ -119,6 +124,15 @@ if [ $? -eq 0 ]; then note "ok: linked VM passes ASSERT_ZERO (exit 0)"; else fai
 # --- AMPL exact check ---------------------------------------------
 say "== AMPL exact check"
 check "AMPL check (max violation 0 over {-1, 1})" "$WORK/ampl-check"
+
+# --- Lean: build oleans first --------------------------------------
+# The cross-check, the correspondence corpus, and the Gherkin
+# correspondence step all run `lake env lean` against the Vanish
+# modules. On a fresh checkout there are no oleans until `lake build`
+# runs; G_proof builds them too, but it runs after these steps, so a
+# fresh checkout failed here (CI run 45520800279). Build first.
+say "== Lean build"
+lake build >"$WORK/last.log" 2>&1 || fail "lake build"
 
 # --- Lean: cross-check XSLT lowering vs Lean compile -------------
 say "== Lean cross-check"

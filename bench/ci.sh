@@ -8,6 +8,11 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 LOG="$ROOT/bench/ci.log"
 export PATH="$HOME/workspace/.tools/racket/bin:$HOME/.elan/toolchains/leanprover--lean4---v4.12.0/bin:$PATH"
 export ELIXIR_ERL_OPTIONS="+fnu"
+
+# Zero-Python gate: fail closed if any Python file or invocation enters the tree.
+# The word is split as p''ython so the check does not match its own line.
+if find "$ROOT" \( -name .git -o -name .lake -o -name .pipeline-work \) -prune -o -name '*.py' -print | grep -q .; then echo "FAIL: Python file present" >&2; exit 1; fi
+if grep -rnE '(^|[^A-Za-z0-9_])p''ython3?([^A-Za-z0-9_]|$)' --include='*.sh' --include='*.yml' --include='*.exs' --include='*.rkt' --include='Makefile' "$ROOT" --exclude-dir=.git --exclude-dir=.lake --exclude-dir=.pipeline-work | grep -q .; then echo "FAIL: Python invocation in runnable file" >&2; exit 1; fi
 mkdir -p "$HOME/workspace/.tools/racket/bin"
 ln -sf "$(readlink -f "$(command -v racket)")" "$HOME/workspace/.tools/racket/bin/racket" 2>/dev/null || true
 exec > >(tee "$LOG") 2>&1

@@ -6,6 +6,11 @@
 set -u
 cd "$(dirname "$0")"
 export PATH="$HOME/.elan/bin:$PATH"
+
+# Zero-Python gate: fail closed if any Python file or invocation enters the tree.
+# The word is split as p''ython so the check does not match its own line.
+if find . \( -name .git -o -name .lake -o -name .pipeline-work \) -prune -o -name '*.py' -print | grep -q .; then echo "FAIL: Python file present" >&2; exit 1; fi
+if grep -rnE '(^|[^A-Za-z0-9_])p''ython3?([^A-Za-z0-9_]|$)' --include='*.sh' --include='*.yml' --include='*.exs' --include='*.rkt' --include='Makefile' . --exclude-dir=.git --exclude-dir=.lake --exclude-dir=.pipeline-work | grep -q .; then echo "FAIL: Python invocation in runnable file" >&2; exit 1; fi
 fail=0
 
 echo "== lake build =="

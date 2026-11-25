@@ -1,0 +1,10 @@
+<OMOBJ>
+  <OMA>
+    <OMS cd="vanish1" name="vanishes"/>
+    <OMA>
+      <OMS cd="arith1" name="minus"/>
+      <OMV name="x"/>
+      <OMV name="x"/>
+    </OMA>
+  </OMA>
+</OMOBJ>

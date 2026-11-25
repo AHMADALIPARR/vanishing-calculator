@@ -1,0 +1,18 @@
+<!-- VANISH-LISP SGML grammar document.
+     The DTD in vanish.dtd is the structural specification for the
+     language. This document instantiates it with the (vanish (- x x))
+     example. There is no SGML parser on this box (no nsgmls), so this
+     document is not validated by an SGML tool; the same instance in
+     XML form is validated against the DTD structure by
+     tests/check_dtd.py, which translates the SGML element declarations
+     to their XML form (XML has no start-tag/end-tag minimization
+     indicators, so the "- -" markers are dropped). -->
+<!DOCTYPE vanish SYSTEM "vanish.dtd">
+<vanish>
+  <expr>
+    <sub>
+      <expr><symbol>x</symbol></expr>
+      <expr><symbol>x</symbol></expr>
+    </sub>
+  </expr>
+</vanish>

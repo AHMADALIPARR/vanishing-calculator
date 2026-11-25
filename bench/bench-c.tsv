@@ -1,0 +1,8 @@
+C build vanish-elf	0.707	exit=0 
+C build vanish-load	0.466	exit=0 
+C build vanish-link	0.581	exit=0 
+C build vanish-vm	0.845	exit=0 
+C build ampl-check	0.063	exit=0 
+C build test-poly	0.379	exit=0 
+Math poly test (13/13)	0.002	exit=0 PASS x - x = 0 PASS x - x prints 0 PASS x * 0 = 0 PASS x * 1 = x PASS x + 0 = x PASS x^0 = 1 PASS x^1 = x PASS (x+1)^2 P
+AMPL exact check	0.002	exit=0 x = -1: residual = 0, violation = 0 x = 1: residual = 0, violation = 0 max violation over S = 0 (argmax x = -1) AMPL che

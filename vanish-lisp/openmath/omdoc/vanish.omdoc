@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- openmath/omdoc/vanish.omdoc : OMDoc theory of the vanishing calculus.
+     Holds the vanishes assertion, the rewrite rules as axioms, and the
+     soundness theorem, whose proof is the Lean verification:
+     Vanish.Soundness.soundness_step, Vanish.Certificate.cert_soundness
+     and Vanish.Pipeline.program_vanishes. OpenMath describes meaning;
+     it does not prove correctness. The correspondence between the
+     vanish1 CD symbols, the POP-11 reductions and the Lean semantics
+     is the verification step. -->
+<omdoc>
+  <theory id="vanish">
+    <symbol name="vanishes"/>
+    <symbol name="reduce"/>
+    <symbol name="normalize"/>
+
+    <axiom id="ax-vanishes">
+      <FMP>
+        <OMOBJ>
+          <OMA>
+            <OMS cd="vanish1" name="vanishes"/>
+            <OMV name="e"/>
+          </OMA>
+        </OMOBJ>
+      </FMP>
+      <CMP>vanishes(e) asserts that the expression e equals zero.</CMP>
+    </axiom>
+
+    <axiom id="ax-subSelf">
+      <FMP>
+        <OMOBJ>
+          <OMA>
+            <OMS cd="relation1" name="eq"/>
+            <OMA>
+              <OMS cd="arith1" name="minus"/>
+              <OMV name="x"/>
+              <OMV name="x"/>
+            </OMA>
+            <OMI>0</OMI>
+          </OMA>
+        </OMOBJ>
+      </FMP>
+      <CMP>x - x reduces to 0.</CMP>
+    </axiom>
+
+    <axiom id="ax-mulZero">
+      <FMP>
+        <OMOBJ>
+          <OMA>
+            <OMS cd="relation1" name="eq"/>
+            <OMA>
+              <OMS cd="arith1" name="times"/>
+              <OMV name="x"/>
+              <OMI>0</OMI>
+            </OMA>
+            <OMI>0</OMI>
+          </OMA>
+        </OMOBJ>
+      </FMP>
+      <CMP>x * 0 reduces to 0.</CMP>
+    </axiom>
+
+    <axiom id="ax-addZero">
+      <FMP>
+        <OMOBJ>
+          <OMA>
+            <OMS cd="relation1" name="eq"/>
+            <OMA>
+              <OMS cd="arith1" name="plus"/>
+              <OMV name="x"/>
+              <OMI>0</OMI>
+            </OMA>
+            <OMV name="x"/>
+          </OMA>
+        </OMOBJ>
+      </FMP>
+      <CMP>x + 0 reduces to x.</CMP>
+    </axiom>
+
+    <axiom id="ax-powOne">
+      <FMP>
+        <OMOBJ>
+          <OMA>
+            <OMS cd="relation1" name="eq"/>
+            <OMA>
+              <OMS cd="arith1" name="power"/>
+              <OMV name="x"/>
+              <OMI>1</OMI>
+            </OMA>
+            <OMV name="x"/>
+          </OMA>
+        </OMOBJ>
+      </FMP>
+      <CMP>x ^ 1 reduces to x.</CMP>
+    </axiom>
+
+    <theorem id="th-soundness">
+      <FMP>
+        <OMOBJ>
+          <OMA>
+            <OMS cd="relation1" name="eq"/>
+            <OMV name="e"/>
+            <OMI>0</OMI>
+          </OMA>
+        </OMOBJ>
+      </FMP>
+      <CMP>Every permitted reduction preserves the denotation of an
+      expression, so a program that reduces to zero and verifies
+      establishes that the expression vanishes.</CMP>
+      <proof>
+        <derive>
+          <CMP>By Vanish.Soundness.soundness_step: each single-step
+          reduction preserves eval. By Vanish.Soundness.soundness_star:
+          multi-step reduction preserves eval. By
+          Vanish.Certificate.cert_soundness: a valid certificate
+          guarantees the target vanishes whenever its generators do.
+          By Vanish.Pipeline.program_vanishes: a compiled program whose
+          ASSERT_ZERO succeeds establishes eval e = 0.</CMP>
+        </derive>
+      </proof>
+    </theorem>
+  </theory>
+</omdoc>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CD>
+  <CDName> vanish1 </CDName>
+  <CDURL> https://example.org/cd/vanish1 </CDURL>
+  <CDReviewDate> 2027-11-24 </CDReviewDate>
+  <CDDate> 2026-11-24 </CDDate>
+  <CDStatus> experimental </CDStatus>
+  <CDVersion> 1 </CDVersion>
+  <CDRevision> 0 </CDRevision>
+  <Description> Vanishing calculus </Description>
+  <CDDefinition>
+    <Name> vanishes </Name>
+    <Description> Asserts that an expression equals zero. </Description>
+    <FMP>
+      <OMOBJ>
+        <OMA>
+          <OMS cd="relation1" name="eq"/>
+          <OMV name="e"/>
+          <OMI>0</OMI>
+        </OMA>
+      </OMOBJ>
+    </FMP>
+    <Example>
+      <OMOBJ>
+        <OMA>
+          <OMS cd="vanish1" name="vanishes"/>
+          <OMA>
+            <OMS cd="arith1" name="minus"/>
+            <OMV name="x"/>
+            <OMV name="x"/>
+          </OMA>
+        </OMA>
+      </OMOBJ>
+    </Example>
+  </CDDefinition>
+</CD>

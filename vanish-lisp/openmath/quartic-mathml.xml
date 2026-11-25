@@ -1,0 +1,15 @@
+<math>
+  <apply>
+    <eq/>
+    <apply>
+      <minus/>
+      <apply>
+        <power/>
+        <ci>x</ci>
+        <cn>4</cn>
+      </apply>
+      <cn>1</cn>
+    </apply>
+    <cn>0</cn>
+  </apply>
+</math>

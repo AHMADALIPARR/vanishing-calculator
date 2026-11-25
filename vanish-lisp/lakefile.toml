@@ -1,0 +1,7 @@
+name = "vanish-lisp"
+version = "0.1.0"
+defaultTargets = ["Vanish"]
+
+[[lean_lib]]
+name = "Vanish"
+srcDir = "lean"

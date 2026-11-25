@@ -1,0 +1,76 @@
+# CI — vanishing-calculator
+#
+# Runs the repository's real checks on every push and pull request.
+# The pipeline job runs the shipped tests/run_pipeline.sh and expects
+# ADMIT: the XSLT and corpus workers are Elixir (tests/*.exs), driven
+# through xsltproc and :xmerl. There is no Python anywhere in the
+# stack.
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lean 4.12.0 (elan)
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o /tmp/elan-init.sh
+          sh /tmp/elan-init.sh -y --default-toolchain leanprover/lean4:v4.12.0
+      - name: Install Emacs and Racket
+        run: sudo apt-get update -qq && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq emacs-nox racket
+      - name: Run verify.sh
+        run: ./vanish-lisp/verify.sh
+
+  c-builds:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build C stages and run math/AMPL tests
+        run: bash bench/bench.sh vanish-lisp bench/bench-c.tsv
+
+  calculators:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install SBCL and Racket
+        run: sudo apt-get update -qq && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq sbcl racket
+      - name: Run calculators on scratch copies only
+        run: |
+          rm -rf /tmp/calc-ci && mkdir -p /tmp/calc-ci
+          cp vanish-lisp/vanishing-calculator/vanishing_calculator.lisp \
+             vanish-lisp/vanishing-calculator/vanishing_calculator.rkt \
+             vanish-lisp/vanishing-calculator/vanishing_calculator.c /tmp/calc-ci/
+          sbcl --script /tmp/calc-ci/vanishing_calculator.lisp
+          racket /tmp/calc-ci/vanishing_calculator.rkt
+          gcc -O2 -o /tmp/calc-ci/vcalc /tmp/calc-ci/vanishing_calculator.c
+          /tmp/calc-ci/vcalc
+
+  pipeline:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Elixir 1.20.5 / OTP 29
+        uses: erlef/setup-beam@v1
+        with:
+          otp-version: "29.1"
+          elixir-version: "1.20.5"
+      - name: Install toolchain
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o /tmp/elan-init.sh
+          sh /tmp/elan-init.sh -y --default-toolchain leanprover/lean4:v4.12.0
+          sudo apt-get update -qq && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq emacs-nox racket xsltproc libxml2-utils
+          mkdir -p "$HOME/workspace/.tools/racket/bin"
+          ln -sf "$(readlink -f "$(command -v racket)")" "$HOME/workspace/.tools/racket/bin/racket"
+      - name: Shipped pipeline — expect ADMIT
+        run: |
+          bash vanish-lisp/tests/run_pipeline.sh 2>&1 | tee bench/pipeline-ci.log
+          test "${PIPESTATUS[0]}" -eq 0
+          grep -q "^ADMIT$" bench/pipeline-ci.log
+      - name: Upload pipeline logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-logs
+          path: bench/pipeline-ci.log

@@ -1,0 +1,160 @@
+PASS powershell run1 exit 0
+PASS powershell run1 fib10
+PASS powershell run1 primes30
+PASS powershell run1 fact5
+PASS powershell run1 hidden state
+PASS powershell run1 payload present
+PASS powershell run1 engine gone
+PASS powershell run2 exit 0
+PASS powershell run2 restored msg
+PASS powershell run2 byte-identical restore
+PASS powershell run3 exit 0
+PASS powershell run3 fib10 again
+--- powershell run1 ---
+=======================================================
+ SELF-MODIFYING VANISHING CALCULATOR (POWERSHELL)
+=======================================================
+
+STATE: VISIBLE - Calculation Engine is ACTIVE
+
+Fibonacci(10): [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+Primes(30): [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+Factorial(5): 120
+
+[✓] Rewrote: /tmp/vc-test/powershell/vanishing_calculator.ps1
+--- powershell run2 ---
+=======================================================
+ SELF-MODIFYING VANISHING CALCULATOR (POWERSHELL)
+=======================================================
+
+STATE: HIDDEN - Calculation Engine is HIDDEN
+
+[✓] Rewrote: /tmp/vc-test/powershell/vanishing_calculator.ps1
+Engine restored. Run again to calculate.
+PASS racket run1 exit 0
+PASS racket run1 fib10
+PASS racket run1 primes30
+PASS racket run1 fact5
+PASS racket run1 hidden state
+PASS racket run1 payload present
+PASS racket run1 engine gone
+PASS racket run2 exit 0
+PASS racket run2 restored msg
+PASS racket run2 byte-identical restore
+PASS racket run3 exit 0
+PASS racket run3 fib10 again
+--- racket run1 ---
+=======================================================
+ SELF-MODIFYING VANISHING CALCULATOR (RACKET)
+=======================================================
+
+STATE: VISIBLE - Calculation Engine is ACTIVE
+
+Fibonacci(10): (0 1 1 2 3 5 8 13 21 34)
+Primes(30): (2 3 5 7 11 13 17 19 23 29)
+Factorial(5): 120
+
+[✓] Rewrote: /tmp/vc-test/racket/vanishing_calculator.rkt
+--- racket run2 ---
+=======================================================
+ SELF-MODIFYING VANISHING CALCULATOR (RACKET)
+=======================================================
+
+STATE: HIDDEN - Calculation Engine is HIDDEN
+
+[✓] Rewrote: /tmp/vc-test/racket/vanishing_calculator.rkt
+Engine restored. Run again to calculate.
+PASS lisp run1 exit 0
+PASS lisp run1 fib10
+PASS lisp run1 primes30
+PASS lisp run1 fact5
+PASS lisp run1 hidden state
+PASS lisp run1 payload present
+PASS lisp run1 engine gone
+PASS lisp run2 exit 0
+PASS lisp run2 restored msg
+PASS lisp run2 byte-identical restore
+PASS lisp run3 exit 0
+PASS lisp run3 fib10 again
+--- lisp run1 ---
+=======================================================
+ SELF-MODIFYING VANISHING CALCULATOR (COMMON LISP)
+=======================================================
+
+STATE: VISIBLE - Calculation Engine is ACTIVE
+
+Fibonacci(10): [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+Primes(30): [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+Factorial(5): 120
+
+[✓] Rewrote: /tmp/vc-test/lisp/vanishing_calculator.lisp
+--- lisp run2 ---
+=======================================================
+ SELF-MODIFYING VANISHING CALCULATOR (COMMON LISP)
+=======================================================
+
+STATE: HIDDEN - Calculation Engine is HIDDEN
+
+[✓] Rewrote: /tmp/vc-test/lisp/vanishing_calculator.lisp
+Engine restored. Run again to calculate.
+PASS c compile -Werror exit 0
+PASS c run exit 0
+PASS c fib10 reversed first run
+PASS c vanish second run empty
+--- c run ---
+34 21 13 8 5 3 2 1 1 0
+PASS ob-lean4 byte-compile exit 0
+PASS ob-lean4 elc produced
+PASS lean --json exit 0
+PASS lean --json eval 2
+PASS lean --json check Nat
+PASS ob-lean4 end-to-end exit 0
+PASS ob-lean4 exec eval+check
+PASS ob-lean4 exec error positioned
+PASS ob-lean4 session replay
+PASS ob-lean4 session re-run silent
+PASS ob-lean4 generated lines
+PASS ob-lean4 lake flag
+PASS ob-lean4 toolchain
+PASS ob-lean4 edit write-back
+--- ob-lean4 end-to-end ---
+EXEC1: "2
+Nat : Type
+42"
+EXEC-ERR: "L1:17 error: type mismatch
+  \"x\"
+has type
+  String : Type
+but is expected to have type
+  Nat : Type"
+GENLINES: ("def p : Nat := 1")
+LAKEP: ("yes" "t" "true") nil
+TOOLCHAIN: "leanprover/lean4:v4.12.0"
+SESS1: nil
+SESS2: "8"
+SESS1-AGAIN: nil
+EDIT-BUF: "edit_7f4b8823.lean"
+EDIT-CONTENTS: "-- ob-lean4: generated, not part of the block {{{
+def n := 3
+-- ob-lean4: }}}
+#eval n + 1
+"
+ORG-AFTER-EDIT: "* Test
+
+#+begin_src lean4 :session ed :var n=3
+  #eval n + 2
+#+end_src
+"
+PASS poplog file has calc_fibonacci
+PASS poplog file has calc_primes
+PASS poplog file has calc_factorial
+PASS poplog file uses issubstring
+PASS poplog file has engine markers
+PASS poplog file has base64_encode
+PASS poplog file has base64_decode
+PASS poplog file has make_hidden
+PASS poplog file has make_visible
+PASS poplog mirror fib10
+PASS poplog mirror primes30
+PASS poplog mirror fact5
+FAILURES: 0

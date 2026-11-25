@@ -1,0 +1,15 @@
+# Measured wall-clock seconds on this box, 2026-11-24. See STATUS.md for raw commands.
+# label<TAB>seconds<TAB>result
+Full pipeline (ADMIT)	211.247	ADMIT, 5/5 gates
+Correspondence corpus	194.503	PASS, 14164 expressions
+Gherkin runner	6.561	4/4 scenarios
+Clean lake build	6.110	PASS, 11 targets
+C builds (6 binaries)	4.489	clean, -Wall -Wextra -Werror
+Scheme selftest	2.747	17/17
+verify.sh	1.053	ALL CHECKS PASS
+Axiom audit	0.436	propext / Quot.sound only
+Certificate tests	0.366	exit 0
+ERT suites	0.340	5/5
+Incremental lake build	0.162	PASS
+Math poly test	0.002	13/13
+AMPL exact check	0.001	max violation 0

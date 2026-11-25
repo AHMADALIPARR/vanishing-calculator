@@ -1,0 +1,15 @@
+<OMOBJ>
+  <OMA>
+    <OMS cd="relation1" name="eq"/>
+    <OMA>
+      <OMS cd="arith1" name="minus"/>
+      <OMA>
+        <OMS cd="arith1" name="power"/>
+        <OMV name="x"/>
+        <OMI>4</OMI>
+      </OMA>
+      <OMI>1</OMI>
+    </OMA>
+    <OMI>0</OMI>
+  </OMA>
+</OMOBJ>

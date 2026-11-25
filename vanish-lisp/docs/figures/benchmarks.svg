@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="512" viewBox="0 0 880 512">
+<rect x="0" y="0" width="880" height="512" fill="#ffffff"/>
+<text x="30" y="26" font-size="16" font-weight="bold" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>Measured wall-clock time, seconds (log scale)</text>
+<text x="242" y="56" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>Full pipeline (ADMIT)</text>
+<rect x="250" y="41" width="560.0" height="18" fill="#2e6da4"/>
+<text x="818.0" y="56" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>211.247 s — ADMIT, 5/5 gates</text>
+<text x="242" y="90" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>Correspondence corpus</text>
+<rect x="250" y="75" width="556.2" height="18" fill="#2e6da4"/>
+<text x="814.2" y="90" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>194.503 s — PASS, 14164 expressions</text>
+<text x="242" y="124" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>Gherkin runner</text>
+<rect x="250" y="109" width="401.4" height="18" fill="#2e6da4"/>
+<text x="659.4" y="124" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>6.561 s — 4/4 scenarios</text>
+<text x="242" y="158" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>Clean lake build</text>
+<rect x="250" y="143" width="398.2" height="18" fill="#2e6da4"/>
+<text x="656.2" y="158" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>6.11 s — PASS, 11 targets</text>
+<text x="242" y="192" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>C builds (6 binaries)</text>
+<rect x="250" y="177" width="384.1" height="18" fill="#2e6da4"/>
+<text x="642.1" y="192" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>4.489 s — clean, -Wall -Wextra -Werror</text>
+<text x="242" y="226" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>Scheme selftest</text>
+<rect x="250" y="211" width="361.7" height="18" fill="#2e6da4"/>
+<text x="619.7" y="226" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>2.747 s — 17/17</text>
+<text x="242" y="260" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>verify.sh</text>
+<rect x="250" y="245" width="317.9" height="18" fill="#2e6da4"/>
+<text x="575.9" y="260" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>1.053 s — ALL CHECKS PASS</text>
+<text x="242" y="294" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>Axiom audit</text>
+<rect x="250" y="279" width="277.6" height="18" fill="#2e6da4"/>
+<text x="535.6" y="294" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>0.436 s — propext / Quot.sound only</text>
+<text x="242" y="328" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>Certificate tests</text>
+<rect x="250" y="313" width="269.6" height="18" fill="#2e6da4"/>
+<text x="527.6" y="328" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>0.366 s — exit 0</text>
+<text x="242" y="362" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>ERT suites</text>
+<rect x="250" y="347" width="266.2" height="18" fill="#2e6da4"/>
+<text x="524.2" y="362" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>0.34 s — 5/5</text>
+<text x="242" y="396" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>Incremental lake build</text>
+<rect x="250" y="381" width="232.4" height="18" fill="#2e6da4"/>
+<text x="490.4" y="396" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>0.162 s — PASS</text>
+<text x="242" y="430" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>Math poly test</text>
+<rect x="250" y="415" width="31.7" height="18" fill="#2e6da4"/>
+<text x="289.7" y="430" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>0.002 s — 13/13</text>
+<text x="242" y="464" font-size="12" text-anchor="end" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>AMPL exact check</text>
+<rect x="250" y="449" width="2.0" height="18" fill="#2e6da4"/>
+<text x="260.0" y="464" font-size="12" fill="#1a1a1a" font-family='DejaVu Sans, sans-serif'>0.001 s — max violation 0</text>
+<text x="30" y="504" font-size="11" fill="#555555" font-family='DejaVu Sans, sans-serif'>Measured 2026-11-24 on this box (1.5 shared CPUs, 6 GB RAM). Full pipeline includes the corpus check.</text>
+</svg>

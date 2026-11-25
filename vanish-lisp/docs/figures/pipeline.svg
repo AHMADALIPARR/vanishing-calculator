@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="760" viewBox="0 0 880 760">
+<rect x="0" y="0" width="880" height="760" fill="#ffffff"/>
+<text x="440" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#1a1a1a" font-family="DejaVu Sans, sans-serif">VANISH-LISP pipeline — stages as run by tests/run_pipeline.sh</text>
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2e6da4"/></marker>
+</defs>
+<g font-family="DejaVu Sans, sans-serif" font-size="13" fill="#1a1a1a">
+<!-- stage boxes -->
+<rect x="240" y="52" width="400" height="34" rx="4" fill="#eaf2f8" stroke="#2e6da4"/>
+<text x="440" y="74" text-anchor="middle">1. Build C stages — vanish-elf, vanish-load, vanish-link, vanish-vm, ampl-check, test-poly</text>
+<rect x="240" y="110" width="400" height="34" rx="4" fill="#eaf2f8" stroke="#2e6da4"/>
+<text x="440" y="132" text-anchor="middle">2. Math test 13/13 · Scheme selftest 17/17</text>
+<rect x="240" y="168" width="400" height="34" rx="4" fill="#eaf2f8" stroke="#2e6da4"/>
+<text x="440" y="190" text-anchor="middle">3. Per-example chain — four examples, ex1 to ex4</text>
+<rect x="120" y="226" width="640" height="150" rx="4" fill="#f7f7f7" stroke="#999999"/>
+<text x="440" y="248" text-anchor="middle" font-weight="bold">Scheme —openmath → OpenMath (canonical IR)</text>
+<text x="440" y="272" text-anchor="middle">openmath-to-vanish.xsl → vanish XML</text>
+<text x="440" y="296" text-anchor="middle">canonicalize.xsl → lower.xsl → certificates.xsl</text>
+<text x="440" y="320" text-anchor="middle">ELF writer seals → loader verifies hashes → VM runs</text>
+<text x="440" y="344" text-anchor="middle" fill="#555555">ex1, ex4 pass ASSERT_ZERO · ex2 conditional · ex3 non-vanishing</text>
+<text x="440" y="366" text-anchor="middle" fill="#555555">certificate issued to certificates/exN.cert.xml</text>
+<rect x="240" y="400" width="400" height="34" rx="4" fill="#eaf2f8" stroke="#2e6da4"/>
+<text x="440" y="422" text-anchor="middle">4. Linker — ex1 + ex4 → 13 instructions, 1 symbol</text>
+<rect x="240" y="458" width="400" height="34" rx="4" fill="#eaf2f8" stroke="#2e6da4"/>
+<text x="440" y="480" text-anchor="middle">5. AMPL exact check — max violation 0 over {−1, 1}</text>
+<rect x="240" y="516" width="400" height="34" rx="4" fill="#eaf2f8" stroke="#2e6da4"/>
+<text x="440" y="538" text-anchor="middle">6. Lean cross-check — XSLT lowering = Lean compile, 4/4</text>
+<rect x="240" y="574" width="400" height="34" rx="4" fill="#eaf2f8" stroke="#2e6da4"/>
+<text x="440" y="596" text-anchor="middle">7. Correspondence corpus — 14,164 expressions</text>
+<rect x="240" y="632" width="400" height="34" rx="4" fill="#eaf2f8" stroke="#2e6da4"/>
+<text x="440" y="654" text-anchor="middle">8. Admission gate — G_grammar ∧ G_semantics ∧ G_proof ∧ G_behavior ∧ G_binary</text>
+<rect x="340" y="690" width="200" height="40" rx="4" fill="#2e6da4"/>
+<text x="440" y="716" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">ADMIT</text>
+<!-- arrows -->
+<line x1="440" y1="86" x2="440" y2="110" stroke="#2e6da4" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="440" y1="144" x2="440" y2="168" stroke="#2e6da4" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="440" y1="202" x2="440" y2="226" stroke="#2e6da4" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="440" y1="376" x2="440" y2="400" stroke="#2e6da4" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="440" y1="434" x2="440" y2="458" stroke="#2e6da4" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="440" y1="492" x2="440" y2="516" stroke="#2e6da4" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="440" y1="550" x2="440" y2="574" stroke="#2e6da4" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="440" y1="608" x2="440" y2="632" stroke="#2e6da4" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="440" y1="666" x2="440" y2="690" stroke="#2e6da4" stroke-width="2" marker-end="url(#arr)"/>
+<text x="440" y="752" text-anchor="middle" font-size="11" fill="#555555">Any stage failure increments FAILURES and blocks ADMIT; the script exits non-zero on DENY.</text>
+</g>
+</svg>

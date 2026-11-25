@@ -1,0 +1,54 @@
+(* VANISH-LISP Common Intermediate Representation (S-expression IR) *)
+(* Version: 0.1.0 *)
+
+program        = { form } ;
+
+form           = vanish-form
+               | reduce-form
+               | normalize-form
+               | under-form
+               | deriv-form
+               | ideal-form
+               | residue-form
+               | witness-form
+               | seal-form
+               | expr ;
+
+vanish-form    = "(" , "vanish" , expr , ")" ;
+reduce-form    = "(" , "reduce" , expr , ")" ;
+normalize-form = "(" , "normalize" , expr , ")" ;
+under-form     = "(" , "under" , "(" , { constraint } , ")" , expr , ")" ;
+deriv-form     = "(" , "derivative" , symbol , expr , ")" ;
+ideal-form     = "(" , "vanish-ideal" , "(" , "generators" , { expr }+ , ")" , expr , ")" ;
+residue-form   = "(" , "residue" , "(" , "generators" , { expr }+ , ")" , expr , ")" ;
+witness-form   = "(" , "witness" , "(" , { constraint } , ")" , expr , ")" ;
+seal-form      = "(" , "seal" , expr , ")" ;
+
+constraint     = "(" , "=" , expr , expr , ")"
+               | "(" , "!=" , expr , expr , ")" ;
+
+expr           = integer
+               | symbol
+               | "(" , "+" , expr , { expr }+ , ")"
+               | "(" , "-" , expr , [ expr ] , ")"
+               | "(" , "*" , expr , { expr }+ , ")"
+               | "(" , "pow" , expr , nonneg-int , ")"
+               | under-form
+               | deriv-form ;
+
+(* Verification Result & Certificate IR *)
+verdict        = "1" | "0" | "bot" ;
+
+certificate    = "(" , "cert"
+               , "(" , "target" , expr , ")"
+               , "(" , "generators" , { expr } , ")"
+               , "(" , "quotients" , { expr } , ")"
+               , "(" , "remainder" , expr , ")"
+               , "(" , "verdict" , verdict , ")"
+               , ")" ;
+
+symbol         = letter , { letter | digit | "-" | "_" } ;
+integer        = [ "-" ] , digit , { digit } ;
+nonneg-int     = digit , { digit } ;
+letter         = "a" .. "z" | "A" .. "Z" ;
+digit          = "0" .. "9" ;

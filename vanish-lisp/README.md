@@ -1,3 +1,12 @@
+<!--
+VANISH-LISP — Copyright (c) 2026 VANISH-LISP Contributors
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+See the LICENSE file for the full text.
+-->
 # Licensed under AGPLv3. See LICENSE.
 
 # VANISH-LISP — A Proof-Carrying, Constraint-Driven, Document-Oriented Lisp Dialect for Symbolic Vanishing Calculus
@@ -6,7 +15,7 @@
 
 [![CI](https://github.com/AHMADALIPARR/vanish-lisp/actions/workflows/ci.yml/badge.svg)](https://github.com/AHMADALIPARR/vanish-lisp/actions/workflows/ci.yml)
 [![Lean 4.12.0](https://img.shields.io/badge/Lean-4.12.0-4444aa)](https://lean-lang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+[![License: AGPLv3](https://img.shields.io/badge/License-AGPLv3-blue)](LICENSE)
 
 **VANISH-LISP Contributors · Research software · Version 0.1.0**
 
@@ -623,7 +632,7 @@ All figures are SVG in `docs/figures/`. The benchmark chart is generated from me
 
 The source was supplied as `vanish-lisp.zip` (29 files, sha256 `53c5393dc70edf04969c89959fc7d1fab77c0451599f67352d1c120b60f8197a`), verified byte-for-byte against `MANIFEST.sha256`. The local history is `d87e77d` (combined repo), `6f573d6` (pipeline), `d722a6d` (title), `00afa4d` (differential fix), `07c3ff2` (Phase 1 correspondence), `a355912` (README rewrite with measured benchmarks). Nothing is pushed; no destination or token was named. The `vanishing-calculator/` subdirectory holds the calculator kernels copied from the pirtm-hcalc repo; its own `verify.py` passes 66 checks, 0 failures.
 
-The repository includes an MIT license, Copyright (c) 2026 VANISH-LISP Contributors. No personal name appears in it.
+The repository is licensed under the GNU Affero General Public License v3, Copyright (c) 2026 VANISH-LISP Contributors. No personal name appears in it.
 
 ---
 

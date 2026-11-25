@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+VANISH-LISP — Copyright (c) 2026 VANISH-LISP Contributors
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+See the LICENSE file for the full text.
+-->
 <!-- openmath/content-mathml-to-openmath.xsl : Content MathML to OpenMath.
      apply/eq becomes relation1 eq; minus, plus, times and power become
      the arith1 operators; unary minus becomes arith1 unary_minus; ci

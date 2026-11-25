@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+VANISH-LISP — Copyright (c) 2026 VANISH-LISP Contributors
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+See the LICENSE file for the full text.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="328" viewBox="0 0 880 328">
 <rect x="0" y="0" width="880" height="328" fill="#ffffff"/>
 <text x="30" y="30" font-size="16" font-weight="bold" fill="#1a1a1a" font-family="DejaVu Sans, sans-serif">C build times — bench/bench-c.tsv (measured 2026-11-24)</text>

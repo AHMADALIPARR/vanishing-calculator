@@ -1,10 +1,19 @@
+<!--
+VANISH-LISP — Copyright (c) 2026 VANISH-LISP Contributors
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+See the LICENSE file for the full text.
+-->
 # vanishing-calculator
 
 [![CI](https://github.com/AHMADALIPARR/vanishing-calculator/actions/workflows/ci.yml/badge.svg)](https://github.com/AHMADALIPARR/vanishing-calculator/actions/workflows/ci.yml)
 [![verify.sh](https://img.shields.io/badge/verify.sh-ALL_CHECKS_PASS-brightgreen)](https://github.com/AHMADALIPARR/vanishing-calculator)
 [![correspondence](https://img.shields.io/badge/correspondence-14164_PASS-brightgreen)](https://github.com/AHMADALIPARR/vanishing-calculator)
 [![zero-python](https://img.shields.io/badge/python-0_files-blue)](https://github.com/AHMADALIPARR/vanishing-calculator)
-[![license](https://img.shields.io/badge/license-AGPLv3-blue)](https://github.com/AHMADALIPARR/vanishing-calculator/blob/main/vanish-lisp/LICENSE)
+[![license](https://img.shields.io/badge/license-AGPLv3-blue)](https://github.com/AHMADALIPARR/vanishing-calculator/blob/main/LICENSE)
 
 Repository: `AHMADALIPARR/vanishing-calculator` (private). Contents: the VANISH-LISP
 proof-carrying symbolic vanishing calculus (`vanish-lisp/`) and the self-modifying
@@ -377,7 +386,7 @@ with no flag tracking them (Section 7.4).
 
 # 2. Complete Repository File Inventory & Module Audit
 
-Audit source: file-by-file read of the full tree (122 files, 0 unreadable).
+Audit source: file-by-file read of the full tree (123 files, 0 unreadable).
 Line counts are `wc -l` values. Certificate XML files are single-line files
 with no trailing newline, so `wc -l` reports 0; byte sizes are given.
 PNG files are binary; `wc -l` does not apply.
@@ -386,133 +395,134 @@ PNG files are binary; `wc -l` does not apply.
 
 | Path | Language / runtime | Lines (wc -l) |
 |---|---|---:|
-| `vanish-lisp/lean/Vanish.lean` | Lean 4 | 39 |
-| `vanish-lisp/lean/Vanish/Certificate.lean` | Lean 4 | 33 |
-| `vanish-lisp/lean/Vanish/Correspondence.lean` | Lean 4 | 507 |
-| `vanish-lisp/lean/Vanish/Ideals.lean` | Lean 4 | 40 |
-| `vanish-lisp/lean/Vanish/Pipeline.lean` | Lean 4 | 185 |
-| `vanish-lisp/lean/Vanish/Semantics.lean` | Lean 4 | 34 |
-| `vanish-lisp/lean/Vanish/Soundness.lean` | Lean 4 | 62 |
-| `vanish-lisp/lean/Vanish/Syntax.lean` | Lean 4 | 41 |
-| `vanish-lisp/lean/Vanish/Termination.lean` | Lean 4 | 30 |
-| `vanish-lisp/tests/axioms.lean` | Lean 4 | 29 |
-| `vanish-lisp/tests/certificates/CertificateTests.lean` | Lean 4 | 29 |
-| `vanish-lisp/tests/lean-cross-check.lean` | Lean 4 | 35 |
-| `vanish-lisp/lakefile.toml` | TOML (Lake) | 7 |
+| `vanish-lisp/lean/Vanish.lean` | Lean 4 | 47 |
+| `vanish-lisp/lean/Vanish/Certificate.lean` | Lean 4 | 41 |
+| `vanish-lisp/lean/Vanish/Correspondence.lean` | Lean 4 | 515 |
+| `vanish-lisp/lean/Vanish/Ideals.lean` | Lean 4 | 48 |
+| `vanish-lisp/lean/Vanish/Pipeline.lean` | Lean 4 | 193 |
+| `vanish-lisp/lean/Vanish/Semantics.lean` | Lean 4 | 42 |
+| `vanish-lisp/lean/Vanish/Soundness.lean` | Lean 4 | 70 |
+| `vanish-lisp/lean/Vanish/Syntax.lean` | Lean 4 | 49 |
+| `vanish-lisp/lean/Vanish/Termination.lean` | Lean 4 | 38 |
+| `vanish-lisp/tests/axioms.lean` | Lean 4 | 37 |
+| `vanish-lisp/tests/certificates/CertificateTests.lean` | Lean 4 | 37 |
+| `vanish-lisp/tests/lean-cross-check.lean` | Lean 4 | 43 |
+| `vanish-lisp/lakefile.toml` | TOML (Lake) | 15 |
 | `vanish-lisp/lean-toolchain` | Lean toolchain specifier | 1 |
-| `vanish-lisp/scheme/vanish.rkt` | Racket | 268 |
-| `vanish-lisp/scheme/batch-xml.rkt` | Racket | 24 |
-| `vanish-lisp/elisp/grammar.el` | Emacs Lisp | 75 |
-| `vanish-lisp/elisp/macros.el` | Emacs Lisp | 56 |
-| `vanish-lisp/elisp/reader.el` | Emacs Lisp | 107 |
-| `vanish-lisp/elisp/repl.el` | Emacs Lisp | 50 |
-| `vanish-lisp/elisp/vanish.el` | Emacs Lisp | 180 |
-| `vanish-lisp/pop11/groebner.p` | POP-11 | 82 |
-| `vanish-lisp/pop11/normalize.p` | POP-11 | 134 |
-| `vanish-lisp/pop11/polynomial.p` | POP-11 | 81 |
-| `vanish-lisp/pop11/rewrite.p` | POP-11 | 108 |
-| `vanish-lisp/pop11/stack.p` | POP-11 | 71 |
-| `vanish-lisp/pop11/vanish.p` | POP-11 | 30 |
-| `vanish-lisp/tests/differential/test-differential.el` | Emacs Lisp (ERT) | 14 |
-| `vanish-lisp/tests/reduction/test-reduction.el` | Emacs Lisp (ERT) | 32 |
-| `vanish-lisp/vanishing-calculator/ob-lean4.el` | Emacs Lisp | 927 |
-| `vanish-lisp/vanishing-calculator/ob-lean4-test.el` | Emacs Lisp | 75 |
-| `vanish-lisp/vanishing-calculator/vanishing_calculator.rkt` | Racket | 147 |
-| `vanish-lisp/elf/abi/ABI.md` | Markdown (spec) | 60 |
-| `vanish-lisp/elf/abi/elfio.c` | C | 319 |
-| `vanish-lisp/elf/abi/elfio.h` | C header | 39 |
-| `vanish-lisp/elf/abi/opcodes.h` | C header | 69 |
-| `vanish-lisp/elf/abi/sha256.c` | C | 132 |
-| `vanish-lisp/elf/abi/sha256.h` | C header | 27 |
-| `vanish-lisp/elf/abi/verify.c` | C | 200 |
-| `vanish-lisp/elf/abi/verify.h` | C header | 42 |
-| `vanish-lisp/elf/linker/vanish-link.c` | C | 239 |
-| `vanish-lisp/elf/loader/vanish-load.c` | C | 55 |
-| `vanish-lisp/elf/writer/vanish-elf.c` | C | 410 |
-| `vanish-lisp/vm/vanish-vm.c` | C | 242 |
-| `vanish-lisp/math/poly.c` | C | 398 |
-| `vanish-lisp/math/poly.h` | C header | 70 |
-| `vanish-lisp/math/test_poly.c` | C | 130 |
-| `vanish-lisp/ampl/check.c` | C | 60 |
-| `vanish-lisp/ampl/vanish.mod` | AMPL | 6 |
-| `vanish-lisp/xslt/canonicalize.xsl` | XSLT 1.0 | 30 |
-| `vanish-lisp/xslt/certificates.xsl` | XSLT 1.0 | 57 |
-| `vanish-lisp/xslt/lower.xsl` | XSLT 1.0 | 63 |
-| `vanish-lisp/openmath/content-mathml-to-openmath.xsl` | XSLT 1.0 | 77 |
-| `vanish-lisp/openmath/omdoc/vanish.omdoc` | OMDoc XML | 122 |
-| `vanish-lisp/openmath/openmath-to-vanish.xsl` | XSLT 1.0 | 99 |
-| `vanish-lisp/openmath/quartic-mathml.xml` | Content MathML | 15 |
-| `vanish-lisp/openmath/quartic.om` | OpenMath XML | 15 |
-| `vanish-lisp/openmath/sub-self.om` | OpenMath XML | 10 |
-| `vanish-lisp/openmath/vanish-to-openmath.xsl` | XSLT 1.0 | 61 |
-| `vanish-lisp/openmath/vanish1.ocd` | OpenMath CD | 36 |
-| `vanish-lisp/sgml/grammar.sgml` | SGML | 18 |
-| `vanish-lisp/sgml/vanish.dtd` | SGML/XML DTD | 8 |
-| `vanish-lisp/dsssl/reduction.dsl` | DSSSL / Scheme | 53 |
-| `vanish-lisp/dsssl/semantics.dsl` | DSSSL / Scheme | 45 |
+| `vanish-lisp/scheme/vanish.rkt` | Racket | 276 |
+| `vanish-lisp/scheme/batch-xml.rkt` | Racket | 32 |
+| `vanish-lisp/elisp/grammar.el` | Emacs Lisp | 83 |
+| `vanish-lisp/elisp/macros.el` | Emacs Lisp | 64 |
+| `vanish-lisp/elisp/reader.el` | Emacs Lisp | 115 |
+| `vanish-lisp/elisp/repl.el` | Emacs Lisp | 58 |
+| `vanish-lisp/elisp/vanish.el` | Emacs Lisp | 188 |
+| `vanish-lisp/pop11/groebner.p` | POP-11 | 90 |
+| `vanish-lisp/pop11/normalize.p` | POP-11 | 142 |
+| `vanish-lisp/pop11/polynomial.p` | POP-11 | 89 |
+| `vanish-lisp/pop11/rewrite.p` | POP-11 | 116 |
+| `vanish-lisp/pop11/stack.p` | POP-11 | 79 |
+| `vanish-lisp/pop11/vanish.p` | POP-11 | 38 |
+| `vanish-lisp/tests/differential/test-differential.el` | Emacs Lisp (ERT) | 22 |
+| `vanish-lisp/tests/reduction/test-reduction.el` | Emacs Lisp (ERT) | 40 |
+| `vanish-lisp/vanishing-calculator/ob-lean4.el` | Emacs Lisp | 935 |
+| `vanish-lisp/vanishing-calculator/ob-lean4-test.el` | Emacs Lisp | 83 |
+| `vanish-lisp/vanishing-calculator/vanishing_calculator.rkt` | Racket | 155 |
+| `vanish-lisp/elf/abi/ABI.md` | Markdown (spec) | 69 |
+| `vanish-lisp/elf/abi/elfio.c` | C | 329 |
+| `vanish-lisp/elf/abi/elfio.h` | C header | 49 |
+| `vanish-lisp/elf/abi/opcodes.h` | C header | 79 |
+| `vanish-lisp/elf/abi/sha256.c` | C | 142 |
+| `vanish-lisp/elf/abi/sha256.h` | C header | 37 |
+| `vanish-lisp/elf/abi/verify.c` | C | 210 |
+| `vanish-lisp/elf/abi/verify.h` | C header | 52 |
+| `vanish-lisp/elf/linker/vanish-link.c` | C | 249 |
+| `vanish-lisp/elf/loader/vanish-load.c` | C | 65 |
+| `vanish-lisp/elf/writer/vanish-elf.c` | C | 420 |
+| `vanish-lisp/vm/vanish-vm.c` | C | 252 |
+| `vanish-lisp/math/poly.c` | C | 408 |
+| `vanish-lisp/math/poly.h` | C header | 80 |
+| `vanish-lisp/math/test_poly.c` | C | 140 |
+| `vanish-lisp/ampl/check.c` | C | 70 |
+| `vanish-lisp/ampl/vanish.mod` | AMPL | 14 |
+| `vanish-lisp/xslt/canonicalize.xsl` | XSLT 1.0 | 39 |
+| `vanish-lisp/xslt/certificates.xsl` | XSLT 1.0 | 66 |
+| `vanish-lisp/xslt/lower.xsl` | XSLT 1.0 | 72 |
+| `vanish-lisp/openmath/content-mathml-to-openmath.xsl` | XSLT 1.0 | 86 |
+| `vanish-lisp/openmath/omdoc/vanish.omdoc` | OMDoc XML | 131 |
+| `vanish-lisp/openmath/openmath-to-vanish.xsl` | XSLT 1.0 | 108 |
+| `vanish-lisp/openmath/quartic-mathml.xml` | Content MathML | 24 |
+| `vanish-lisp/openmath/quartic.om` | OpenMath XML | 24 |
+| `vanish-lisp/openmath/sub-self.om` | OpenMath XML | 19 |
+| `vanish-lisp/openmath/vanish-to-openmath.xsl` | XSLT 1.0 | 70 |
+| `vanish-lisp/openmath/vanish1.ocd` | OpenMath CD | 45 |
+| `vanish-lisp/sgml/grammar.sgml` | SGML | 27 |
+| `vanish-lisp/sgml/vanish.dtd` | SGML/XML DTD | 17 |
+| `vanish-lisp/dsssl/reduction.dsl` | DSSSL / Scheme | 61 |
+| `vanish-lisp/dsssl/semantics.dsl` | DSSSL / Scheme | 53 |
 | `vanish-lisp/certificates/ex1.cert.xml` | XML certificate | 0 (826 bytes) |
 | `vanish-lisp/certificates/ex2.cert.xml` | XML certificate | 0 (992 bytes) |
 | `vanish-lisp/certificates/ex3.cert.xml` | XML certificate | 0 (830 bytes) |
 | `vanish-lisp/certificates/ex4.cert.xml` | XML certificate | 0 (825 bytes) |
-| `vanish-lisp/ir/contract.md` | Markdown (contract) | 61 |
-| `vanish-lisp/ir/grammar.ebnf` | EBNF | 54 |
-| `vanish-lisp/tests/check_dtd.exs` | Elixir script | 127 |
-| `vanish-lisp/tests/check_dump.exs` | Elixir script | 48 |
-| `vanish-lisp/tests/check_om.exs` | Elixir script | 76 |
-| `vanish-lisp/tests/correspondence.exs` | Elixir script | 492 |
-| `vanish-lisp/tests/program_to_text.exs` | Elixir script | 59 |
-| `vanish-lisp/tests/xslt.exs` | Elixir script | 44 |
-| `vanish-lisp/tests/correspondence.sh` | Bash | 17 |
-| `vanish-lisp/tests/run_pipeline.sh` | Bash | 205 |
-| `vanish-lisp/tests/examples/ex1.sexp` | S-expression | 1 |
-| `vanish-lisp/tests/examples/ex2.sexp` | S-expression | 1 |
-| `vanish-lisp/tests/examples/ex3.sexp` | S-expression | 1 |
-| `vanish-lisp/tests/examples/ex4.sexp` | S-expression | 1 |
-| `vanish-lisp/tests/algebra/ideal-cases.p` | POP-11 | 10 |
-| `vanish-lisp/gherkin/runner.rkt` | Racket | 543 |
-| `vanish-lisp/gherkin/vanishing.feature` | Gherkin | 43 |
-| `vanish-lisp/verify.sh` | POSIX shell | 69 |
-| `vanish-lisp/Makefile` | GNU Make | 22 |
-| `README.md` | Markdown | 3,322 |
-| `.gitignore` | gitignore | 7 |
-| `.github/workflows/ci.yml` | GitHub Actions YAML | 85 |
+| `vanish-lisp/ir/contract.md` | Markdown (contract) | 70 |
+| `vanish-lisp/ir/grammar.ebnf` | EBNF | 64 |
+| `vanish-lisp/tests/check_dtd.exs` | Elixir script | 135 |
+| `vanish-lisp/tests/check_dump.exs` | Elixir script | 56 |
+| `vanish-lisp/tests/check_om.exs` | Elixir script | 84 |
+| `vanish-lisp/tests/correspondence.exs` | Elixir script | 500 |
+| `vanish-lisp/tests/program_to_text.exs` | Elixir script | 67 |
+| `vanish-lisp/tests/xslt.exs` | Elixir script | 52 |
+| `vanish-lisp/tests/correspondence.sh` | Bash | 25 |
+| `vanish-lisp/tests/run_pipeline.sh` | Bash | 213 |
+| `vanish-lisp/tests/examples/ex1.sexp` | S-expression | 9 |
+| `vanish-lisp/tests/examples/ex2.sexp` | S-expression | 9 |
+| `vanish-lisp/tests/examples/ex3.sexp` | S-expression | 9 |
+| `vanish-lisp/tests/examples/ex4.sexp` | S-expression | 9 |
+| `vanish-lisp/tests/algebra/ideal-cases.p` | POP-11 | 18 |
+| `vanish-lisp/gherkin/runner.rkt` | Racket | 551 |
+| `vanish-lisp/gherkin/vanishing.feature` | Gherkin | 51 |
+| `vanish-lisp/verify.sh` | POSIX shell | 77 |
+| `vanish-lisp/Makefile` | GNU Make | 30 |
+| `README.md` | Markdown | 3,365 |
+| `LICENSE` | License text (AGPLv3) | 661 |
+| `.gitignore` | gitignore | 15 |
+| `.github/workflows/ci.yml` | GitHub Actions YAML | 93 |
 | `bench/bench-c.tsv` | TSV (benchmark output) | 8 |
-| `bench/bench.sh` | Bash | 38 |
-| `bench/ci.sh` | Bash | 47 |
-| `visuals/bench-build-times.svg` | SVG | 25 |
-| `visuals/correspondence.svg` | SVG | 29 |
-| `visuals/expr-tree-ex2.svg` | SVG | 27 |
+| `bench/bench.sh` | Bash | 46 |
+| `bench/ci.sh` | Bash | 55 |
+| `visuals/bench-build-times.svg` | SVG | 34 |
+| `visuals/correspondence.svg` | SVG | 38 |
+| `visuals/expr-tree-ex2.svg` | SVG | 36 |
 | `visuals/photo-pipeline.png` | PNG image | binary (141,916 bytes) |
 | `visuals/photo-verify.png` | PNG image | binary (81,617 bytes) |
-| `visuals/vanish-cycle.svg` | SVG | 35 |
+| `visuals/vanish-cycle.svg` | SVG | 44 |
 | `vanishing_calculator.lisp` | Common Lisp (SBCL) | 187 |
-| `vanish-lisp/.gitignore` | gitignore | 4 |
+| `vanish-lisp/.gitignore` | gitignore | 12 |
 | `vanish-lisp/LICENSE` | License text (AGPLv3) | 661 |
 | `vanish-lisp/LICENSE_HEADER.txt` | Plain text | 8 |
 | `vanish-lisp/MANIFEST.sha256` | SHA-256 manifest | 44 |
 | `vanish-lisp/MANIFEST.zip.sha256` | SHA-256 manifest | 29 |
-| `vanish-lisp/PIPELINE.md` | Markdown | 313 |
-| `vanish-lisp/README.md` | Markdown | 630 |
-| `vanish-lisp/STATUS.md` | Markdown (status log) | 388 |
+| `vanish-lisp/PIPELINE.md` | Markdown | 322 |
+| `vanish-lisp/README.md` | Markdown | 639 |
+| `vanish-lisp/STATUS.md` | Markdown (status log) | 397 |
 | `vanish-lisp/TEST_LOG.txt` | Plain text (test log) | 74 |
-| `vanish-lisp/docs/figures/admission.svg` | SVG | 28 |
-| `vanish-lisp/docs/figures/benchmarks.svg` | SVG | 44 |
+| `vanish-lisp/docs/figures/admission.svg` | SVG | 37 |
+| `vanish-lisp/docs/figures/benchmarks.svg` | SVG | 53 |
 | `vanish-lisp/docs/figures/benchmarks.tsv` | TSV (benchmark data) | 15 |
-| `vanish-lisp/docs/figures/correspondence.svg` | SVG | 29 |
-| `vanish-lisp/docs/figures/pipeline.svg` | SVG | 46 |
-| `vanish-lisp/vanishing-calculator/.gitignore` | gitignore | 2 |
-| `vanish-lisp/vanishing-calculator/README.md` | Markdown | 44 |
-| `vanish-lisp/vanishing-calculator/STATUS.md` | Markdown (status log) | 94 |
+| `vanish-lisp/docs/figures/correspondence.svg` | SVG | 38 |
+| `vanish-lisp/docs/figures/pipeline.svg` | SVG | 55 |
+| `vanish-lisp/vanishing-calculator/.gitignore` | gitignore | 10 |
+| `vanish-lisp/vanishing-calculator/README.md` | Markdown | 53 |
+| `vanish-lisp/vanishing-calculator/STATUS.md` | Markdown (status log) | 103 |
 | `vanish-lisp/vanishing-calculator/TEST_LOG.txt` | Plain text (test log) | 160 |
-| `vanish-lisp/vanishing-calculator/vanishing_calculator.c` | C (C11/gnu11) | 242 |
+| `vanish-lisp/vanishing-calculator/vanishing_calculator.c` | C (C11/gnu11) | 252 |
 | `vanish-lisp/vanishing-calculator/vanishing_calculator.lisp` | Common Lisp (SBCL) | 187 |
-| `vanish-lisp/vanishing-calculator/vanishing_calculator.p` | POP-11 | 256 |
-| `vanish-lisp/vanishing-calculator/vanishing_calculator.ps1` | PowerShell | 151 |
+| `vanish-lisp/vanishing-calculator/vanishing_calculator.p` | POP-11 | 264 |
+| `vanish-lisp/vanishing-calculator/vanishing_calculator.ps1` | PowerShell | 159 |
 
-Totals: 122 files. Text lines: Lean 1,072; Scheme/Elisp/POP-11/Racket
-2,461; C/ELF/VM/math/AMPL 2,498; XSLT/OpenMath/SGML/DSSSL/IR/certificates
-824; tests/Gherkin/pipeline 1,759; root/bench/CI/docs/calculator 7,259.
-Grand total 15,873 text lines plus 2 PNG images.
+Totals: 123 files. Text lines: Lean 1,176; Scheme/Elisp/POP-11/Racket
+2,605; C/ELF/VM/math/AMPL 2,665; XSLT/OpenMath/SGML/DSSSL/IR/certificates
+976; tests/Gherkin/pipeline 1,895; root/bench/CI/docs/calculator 8,154.
+Grand total 17,471 text lines plus 2 PNG images.
 
 ## 2.2 Per-file breakdown
 
@@ -520,25 +530,25 @@ Grand total 15,873 text lines plus 2 PNG images.
 
 | File | Lines | Role |
 |---|---|---|
-| `vanish-lisp/lean/Vanish.lean` | 39 | Top-level library root re-exporting all Vanish modules with example vanishing proofs. |
-| `vanish-lisp/lean/Vanish/Certificate.lean` | 33 | Proof-carrying vanishing certificates and their soundness. |
-| `vanish-lisp/lean/Vanish/Correspondence.lean` | 507 | Universal compiler correspondence between the formalized XSLT lowering / XML tree and the Lean compiler, plus stack… |
-| `vanish-lisp/lean/Vanish/Ideals.lean` | 40 | Polynomial ideal membership and vanishing theorems. |
-| `vanish-lisp/lean/Vanish/Pipeline.lean` | 185 | The compiled pipeline in Lean — instruction set, compiler, stack-machine execution, preservation and vanishing… |
-| `vanish-lisp/lean/Vanish/Semantics.lean` | 34 | Denotational semantics of VANISH-LISP expressions over ℤ. |
-| `vanish-lisp/lean/Vanish/Soundness.lean` | 62 | Soundness of POP-11 symbolic reduction rules. |
-| `vanish-lisp/lean/Vanish/Syntax.lean` | 41 | AST, tri-state verdict, and macro calculus for VANISH-LISP. |
-| `vanish-lisp/lean/Vanish/Termination.lean` | 30 | Well-founded termination measure for symbolic reduction. |
-| `vanish-lisp/tests/axioms.lean` | 29 | Lists the axioms the Phase 1 correspondence theorems depend on, requiring only the standard Lean axioms. |
-| `vanish-lisp/tests/certificates/CertificateTests.lean` | 29 | Verified vanishing certificate example for `x^4 - 1`. |
-| `vanish-lisp/tests/lean-cross-check.lean` | 35 | Prints the Lean compiler's output for the four pipeline examples for diffing against the XSLT lowering. |
-| `vanish-lisp/lakefile.toml` | 7 | Lake package definition for the Vanish Lean library. |
+| `vanish-lisp/lean/Vanish.lean` | 47 | Top-level library root re-exporting all Vanish modules with example vanishing proofs. |
+| `vanish-lisp/lean/Vanish/Certificate.lean` | 41 | Proof-carrying vanishing certificates and their soundness. |
+| `vanish-lisp/lean/Vanish/Correspondence.lean` | 515 | Universal compiler correspondence between the formalized XSLT lowering / XML tree and the Lean compiler, plus stack… |
+| `vanish-lisp/lean/Vanish/Ideals.lean` | 48 | Polynomial ideal membership and vanishing theorems. |
+| `vanish-lisp/lean/Vanish/Pipeline.lean` | 193 | The compiled pipeline in Lean — instruction set, compiler, stack-machine execution, preservation and vanishing… |
+| `vanish-lisp/lean/Vanish/Semantics.lean` | 42 | Denotational semantics of VANISH-LISP expressions over ℤ. |
+| `vanish-lisp/lean/Vanish/Soundness.lean` | 70 | Soundness of POP-11 symbolic reduction rules. |
+| `vanish-lisp/lean/Vanish/Syntax.lean` | 49 | AST, tri-state verdict, and macro calculus for VANISH-LISP. |
+| `vanish-lisp/lean/Vanish/Termination.lean` | 38 | Well-founded termination measure for symbolic reduction. |
+| `vanish-lisp/tests/axioms.lean` | 37 | Lists the axioms the Phase 1 correspondence theorems depend on, requiring only the standard Lean axioms. |
+| `vanish-lisp/tests/certificates/CertificateTests.lean` | 37 | Verified vanishing certificate example for `x^4 - 1`. |
+| `vanish-lisp/tests/lean-cross-check.lean` | 43 | Prints the Lean compiler's output for the four pipeline examples for diffing against the XSLT lowering. |
+| `vanish-lisp/lakefile.toml` | 15 | Lake package definition for the Vanish Lean library. |
 | `vanish-lisp/lean-toolchain` | 1 | Pins the Lean 4 toolchain version for the project. |
 
 ### `vanish-lisp/lean/Vanish.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 39.
+  **Lines:** 47.
 - **Symbols:** `VanishExamples.vanish_sub` (theorem: `vanishes[x - x]`);
   `VanishExamples.vanish_constraint` (theorem: `vanishes[x - y]` given `x = y`);
   `VanishExamples.polynomial_vanish` (theorem: `vanishes[x ^ 4 - 1]` given `x ^ 2 - 1 = 0`).
@@ -550,7 +560,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/lean/Vanish/Certificate.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 33.
+  **Lines:** 41.
 - **Symbols:** `Vanish.VanishingCert` (structure: `target`, `generators`, `quotients`, `remainder`);
   `Vanish.ValidCert` (def: quotients/generators lengths equal, remainder `Expr.lit 0`, `eval ρ
   target = sumProd ρ quotients generators` for all `ρ`); `Vanish.cert_soundness` (theorem: valid
@@ -561,7 +571,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/lean/Vanish/Correspondence.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 507.
+  **Lines:** 515.
 - **Symbols:** `Vanish.XmlTree` (inductive: `int`, `sym`, `add`, `sub`, `mul`, `pow`);
   `Vanish.encode : Expr → XmlTree`; `Vanish.decode : XmlTree → Option Expr`; `Vanish.WellFormed`;
   `Vanish.lowerXml` (formalized XSLT template semantics); `Vanish.lowerProgram` (`lowerXml` plus
@@ -577,7 +587,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/lean/Vanish/Ideals.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 40.
+  **Lines:** 48.
 - **Symbols:** `Vanish.sumProd` (def: linear combination `∑ q_i * g_i`); `Vanish.sumProd_vanishes`
   (theorem); `Vanish.InIdeal` (def: ideal membership witnessed by explicit cofactors);
   `Vanish.vanish_of_ideal_member` (theorem).
@@ -587,7 +597,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/lean/Vanish/Pipeline.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 185.
+  **Lines:** 193.
 - **Symbols:** `Vanish.Instr` (inductive: `pushSym`, `pushInt`, `dup`, `add`, `sub`, `mul`, `pow`,
   `normalize`, `assertZero`, `verifyProof`, `halt`); `Vanish.instrToText`; `Vanish.compile`;
   `Vanish.step`; `Vanish.run`; theorems `run_append`, `int_toNat_ofNat`, `int_zero_sub`,
@@ -600,7 +610,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/lean/Vanish/Semantics.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 34.
+  **Lines:** 42.
 - **Symbols:** `Vanish.Env` (abbrev: `String → Int`); `Vanish.eval`; `Vanish.satisfiesConstraint`;
   `Vanish.satisfies`; `Vanish.SemanticallyVanishes` (def: `Γ ⊨ e = 0`).
 - **Dependencies:** `Vanish.Syntax`.
@@ -609,7 +619,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/lean/Vanish/Soundness.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 62.
+  **Lines:** 70.
 - **Symbols:** `Vanish.Step` (inductive: `subSelf`, `subZeroRight`, `negZero`, `mulZeroLeft`,
   `mulZeroRight`, `mulOneLeft`, `mulOneRight`, `addZeroLeft`, `addZeroRight`, `powZero`, `powOne`);
   `Vanish.StepStar` (`refl`, `step`); theorems `soundness_step`, `soundness_star`.
@@ -619,7 +629,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/lean/Vanish/Syntax.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 41.
+  **Lines:** 49.
 - **Symbols:** `Vanish.Expr` (inductive: `lit`, `var`, `add`, `sub`, `neg`, `mul`, `pow` with
   exponent `Nat`); `Vanish.Constraint` (`eq`, `neq`); `Vanish.Verdict` (`vanishes`, `nonZero`,
   `undetermined`); `vanishes[term]` macro notation; `vanish_solve` tactic macro (`simp_all | omega |
@@ -630,7 +640,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/lean/Vanish/Termination.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 30.
+  **Lines:** 38.
 - **Symbols:** `Vanish.measure : Expr → Nat`; `Vanish.measure_pos`; `Vanish.termination_step` (every
   reduction step strictly decreases `measure`).
 - **Dependencies:** `Vanish.Soundness`.
@@ -639,7 +649,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/axioms.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 29.
+  **Lines:** 37.
 - **Symbols:** no `def`/`theorem`/`axiom` declarations; 13 `#print axioms` commands for
   `correspondence`, `correspondence_wf`, `decode_encode`, `encode_decode`, `lowerXml_encode`,
   `lowerProgram_encode`, `compile_deterministic`, `lowerXml_deterministic`, `boundedRun_agree`,
@@ -652,7 +662,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/certificates/CertificateTests.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 29.
+  **Lines:** 37.
 - **Symbols:** `VanishTests.quarticCert : VanishingCert` (witness for `x^4 - 1 = (x^2 + 1) * (x^2 -
   1)`, target `x^4 - 1`, generator `x^2 - 1`, quotient `x^2 + 1`, remainder `0`);
   `VanishTests.quarticCert_valid`.
@@ -662,7 +672,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/lean-cross-check.lean`
 
 - **Language:** Lean 4.
-  **Lines:** 35.
+  **Lines:** 43.
 - **Symbols:** `VanishTests.showProgram (e : Expr) : IO Unit` (prints the full compiled program, one
   instruction per line via `instrToText`); `#eval` entry points for ex1 `(vanish (- x x))`, ex2 `(-
   (pow x 4) 1)`, ex3 `(- x y)`, ex4 `(* x 0)`.
@@ -673,7 +683,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/lakefile.toml`
 
 - **Language:** TOML (Lake build configuration).
-  **Lines:** 7.
+  **Lines:** 15.
 - **Symbols:** package `vanish-lisp`, version `0.1.0`, `defaultTargets: ["Vanish"]`, `[[lean_lib]]`
   name `Vanish`, `srcDir: lean`. No dependencies listed, no leanOptions.
 - **Dependencies:** none.
@@ -691,29 +701,29 @@ Grand total 15,873 text lines plus 2 PNG images.
 
 | File | Lines | Role |
 |---|---|---|
-| `vanish-lisp/scheme/vanish.rkt` | 268 | Runnable Racket mirror of the DSSSL reduction/semantics rules that normalizes S-expressions and emits vanish XML and… |
-| `vanish-lisp/scheme/batch-xml.rkt` | 24 | Batch S-expression-to-vanish-XML emitter for the correspondence corpus check. |
-| `vanish-lisp/elisp/grammar.el` | 75 | Restricted mathematical grammar and AST predicates for VANISH-LISP. |
-| `vanish-lisp/elisp/macros.el` | 56 | Core VANISH-LISP primitive macros. |
-| `vanish-lisp/elisp/reader.el` | 107 | Translates VANISH-LISP S-expressions into POP-11 tagged lists and Lean 4 syntax. |
-| `vanish-lisp/elisp/repl.el` | 50 | Interactive Emacs REPL and buffer evaluation commands for VANISH-LISP expressions. |
-| `vanish-lisp/elisp/vanish.el` | 180 | Core Emacs Lisp symbolic vanishing normalizer, differentiation, constraint substitution, and Lean theorem emission. |
-| `vanish-lisp/pop11/groebner.p` | 82 | S-polynomials, Buchberger reduction, vanishing certificates. |
-| `vanish-lisp/pop11/normalize.p` | 134 | Canonical multivariate polynomial normalizer over sparse grevlex-sorted terms. |
-| `vanish-lisp/pop11/polynomial.p` | 81 | Multivariate polynomial division and reduction. |
-| `vanish-lisp/pop11/rewrite.p` | 108 | Pattern-matching term rewrite rules for VANISH-LISP. |
-| `vanish-lisp/pop11/stack.p` | 71 | Open value stack operations for the VANISH-LISP POP-11 engine. |
-| `vanish-lisp/pop11/vanish.p` | 30 | Top-level POP-11 symbolic reduction engine for VANISH-LISP. |
-| `vanish-lisp/tests/differential/test-differential.el` | 14 | ERT tests for symbolic differentiation. |
-| `vanish-lisp/tests/reduction/test-reduction.el` | 32 | ERT tests for VANISH-LISP reduction, n-ary product normalization, constraints, and serialization. |
-| `vanish-lisp/vanishing-calculator/ob-lean4.el` | 927 | Org-babel support for Lean 4, compiling src blocks with `lean --json` (sessions replayed,… |
-| `vanish-lisp/vanishing-calculator/ob-lean4-test.el` | 75 | End-to-end batch test for `ob-lean4.el`, printing one marker line per check for the verifier to read. |
-| `vanish-lisp/vanishing-calculator/vanishing_calculator.rkt` | 147 | Self-modifying vanishing calculator that hides its calculation engine as a base64 payload on one run and restores it on… |
+| `vanish-lisp/scheme/vanish.rkt` | 276 | Runnable Racket mirror of the DSSSL reduction/semantics rules that normalizes S-expressions and emits vanish XML and… |
+| `vanish-lisp/scheme/batch-xml.rkt` | 32 | Batch S-expression-to-vanish-XML emitter for the correspondence corpus check. |
+| `vanish-lisp/elisp/grammar.el` | 83 | Restricted mathematical grammar and AST predicates for VANISH-LISP. |
+| `vanish-lisp/elisp/macros.el` | 64 | Core VANISH-LISP primitive macros. |
+| `vanish-lisp/elisp/reader.el` | 115 | Translates VANISH-LISP S-expressions into POP-11 tagged lists and Lean 4 syntax. |
+| `vanish-lisp/elisp/repl.el` | 58 | Interactive Emacs REPL and buffer evaluation commands for VANISH-LISP expressions. |
+| `vanish-lisp/elisp/vanish.el` | 188 | Core Emacs Lisp symbolic vanishing normalizer, differentiation, constraint substitution, and Lean theorem emission. |
+| `vanish-lisp/pop11/groebner.p` | 90 | S-polynomials, Buchberger reduction, vanishing certificates. |
+| `vanish-lisp/pop11/normalize.p` | 142 | Canonical multivariate polynomial normalizer over sparse grevlex-sorted terms. |
+| `vanish-lisp/pop11/polynomial.p` | 89 | Multivariate polynomial division and reduction. |
+| `vanish-lisp/pop11/rewrite.p` | 116 | Pattern-matching term rewrite rules for VANISH-LISP. |
+| `vanish-lisp/pop11/stack.p` | 79 | Open value stack operations for the VANISH-LISP POP-11 engine. |
+| `vanish-lisp/pop11/vanish.p` | 38 | Top-level POP-11 symbolic reduction engine for VANISH-LISP. |
+| `vanish-lisp/tests/differential/test-differential.el` | 22 | ERT tests for symbolic differentiation. |
+| `vanish-lisp/tests/reduction/test-reduction.el` | 40 | ERT tests for VANISH-LISP reduction, n-ary product normalization, constraints, and serialization. |
+| `vanish-lisp/vanishing-calculator/ob-lean4.el` | 935 | Org-babel support for Lean 4, compiling src blocks with `lean --json` (sessions replayed,… |
+| `vanish-lisp/vanishing-calculator/ob-lean4-test.el` | 83 | End-to-end batch test for `ob-lean4.el`, printing one marker line per check for the verifier to read. |
+| `vanish-lisp/vanishing-calculator/vanishing_calculator.rkt` | 155 | Self-modifying vanishing calculator that hides its calculation engine as a base64 payload on one run and restores it on… |
 
 ### `vanish-lisp/scheme/vanish.rkt`
 
 - **Language:** Racket (`#lang racket`), CLI program and library.
-  **Lines:** 268.
+  **Lines:** 276.
 - **Symbols:** `vanish-sub`, `vanish-mul`, `vanish-add`, `vanish-pow`, `vanish-neg`,
   `vanish-normalize`, `denote`, `vanishes?`, `sexp->xml`, `sexp->openmath` (exported via `provide`);
   internal `fold-constants`, `normalize-add`, `normalize-mul`, `canonical-op`, `xml-escape`,
@@ -727,7 +737,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/scheme/batch-xml.rkt`
 
 - **Language:** Racket (`#lang racket`), CLI batch program.
-  **Lines:** 24.
+  **Lines:** 32.
 - **Symbols:** no exports; `module+ main` reads one S-expression per line from stdin and writes one
   vanish XML document per line to stdout, skipping blank lines, exiting nonzero on an unparseable
   line or rejected expression.
@@ -737,7 +747,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elisp/grammar.el`
 
 - **Language:** Emacs Lisp (`lexical-binding: t`).
-  **Lines:** 75.
+  **Lines:** 83.
 - **Symbols:** `vl-ring-operators` (defconst: `(+ - * pow)`); `vl-core-primitives` (defconst:
   `(vanish reduce normalize under derivative vanish-ideal residue witness seal)`); `vl-symbol-p`,
   `vl-constraint-p`, `vl-expr-p`, `vl-validate-expr`; provides feature `grammar`.
@@ -747,7 +757,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elisp/macros.el`
 
 - **Language:** Emacs Lisp (`lexical-binding: t`).
-  **Lines:** 56.
+  **Lines:** 64.
 - **Symbols:** macros `vanish`, `reduce`, `normalize`, `under`, `derivative`, `vanish-ideal`,
   `residue`, `witness`, `seal`; provides feature `macros`.
 - **Dependencies:** `vanish` (`vl-eval-form`, `vl-normalize`, `vl-derivative`,
@@ -757,7 +767,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elisp/reader.el`
 
 - **Language:** Emacs Lisp (`lexical-binding: t`).
-  **Lines:** 107.
+  **Lines:** 115.
 - **Symbols:** `vl-sexp-to-pop11`, `vl-fold-binop-pop11`, `vl-constraint-to-pop11`,
   `vl-sexp-to-lean`, `vl-collect-vars`; provides feature `reader`.
 - **Dependencies:** `cl-lib`, `grammar` (`vl-symbol-p`).
@@ -767,7 +777,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elisp/repl.el`
 
 - **Language:** Emacs Lisp (`lexical-binding: t`).
-  **Lines:** 50.
+  **Lines:** 58.
 - **Symbols:** `vanish-repl-buffer-name` (defvar: `"*VANISH-LISP*"`), `vanish-format-verdict`,
   `vanish-eval-expression` (interactive, autoloaded), `vanish-repl` (interactive, autoloaded);
   provides feature `repl`.
@@ -778,7 +788,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elisp/vanish.el`
 
 - **Language:** Emacs Lisp (`lexical-binding: t`).
-  **Lines:** 180.
+  **Lines:** 188.
 - **Symbols:** `vanish-lisp` (defgroup); `vl-pop11-executable` (defcustom, default `"pop11"`);
   `vl-lean-executable` (defcustom, default `"lake"`); `vl-normalize-product`, `vl-normalize`,
   `vl-substitute`, `vl-apply-constraints`, `vl-derivative`, `vl-vanish-p` (tri-state verdict 1 / 0 /
@@ -792,7 +802,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/pop11/groebner.p`
 
 - **Language:** POP-11.
-  **Lines:** 82.
+  **Lines:** 90.
 - **Symbols:** `vl_mono_lcm`, `vl_mono_max_var`, `vl_spoly`, `vl_buchberger`,
   `vl_vanishing_certificate` (returns `[cert quotients remainder verdict]`).
 - **Dependencies:** `vl_poly_lt`, `vl_mono_div`, `vl_poly_divmod` (`polynomial.p`); `vl_poly_sub`,
@@ -802,7 +812,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/pop11/normalize.p`
 
 - **Language:** POP-11.
-  **Lines:** 134.
+  **Lines:** 142.
 - **Symbols:** `vl_mono_mul`, `vl_mono_add_var`, `vl_poly_add`, `vl_poly_insert_term`,
   `vl_poly_neg`, `vl_poly_sub`, `vl_poly_mul`, `vl_poly_pow`, `vl_to_poly`, `vl_normalize_canon`.
 - **Dependencies:** none (self-contained; POP-11 built-ins such as `mishap`).
@@ -811,7 +821,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/pop11/polynomial.p`
 
 - **Language:** POP-11.
-  **Lines:** 81.
+  **Lines:** 89.
 - **Symbols:** `vl_mono_divides`, `vl_mono_div`, `vl_poly_lt`, `vl_poly_divmod` (returns `[quotients
   remainder]` with `f = sum(q_i * g_i) + r`).
 - **Dependencies:** `vl_poly_add`, `vl_poly_sub`, `vl_poly_mul` (`normalize.p`); no `load`/`require`
@@ -821,7 +831,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/pop11/rewrite.p`
 
 - **Language:** POP-11.
-  **Lines:** 108.
+  **Lines:** 116.
 - **Symbols:** `vl_rewrite_step` (one pattern-matching rewrite step:
   `sub`/`neg`/`mul`/`add`/`pow`/`deriv`), `vl_deriv_step`, `vl_rewrite_fixpoint`.
 - **Dependencies:** none (self-contained).
@@ -830,7 +840,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/pop11/stack.p`
 
 - **Language:** POP-11.
-  **Lines:** 71.
+  **Lines:** 79.
 - **Symbols:** `vl_stack` (global open value stack, initially `[]`), `vl_stack_reset`, `vl_push`,
   `vl_pop` (signals `mishap` on empty stack), `vl_peek`, `vl_dup`, `vl_swap`, `vl_stack_depth`,
   `vl_eval_rpn`.
@@ -840,7 +850,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/pop11/vanish.p`
 
 - **Language:** POP-11.
-  **Lines:** 30.
+  **Lines:** 38.
 - **Symbols:** `vanish_reduce`, `vanish_eval`; top-level smoke invocations `vanish_reduce([sub x
   x])`, `vanish_reduce([mul 0 x])`, `vanish_reduce([add x 0])` printed with `=>` at load time.
 - **Dependencies:** `stack.p`, `rewrite.p`, `normalize.p`, `polynomial.p`, `groebner.p` (loaded via
@@ -850,7 +860,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/differential/test-differential.el`
 
 - **Language:** Emacs Lisp (`lexical-binding: t`), ERT test file.
-  **Lines:** 14.
+  **Lines:** 22.
 - **Symbols:** `vl-test-derivative-vanishing` (ert-deftest: asserts `(vanish (derivative x (+ (* 0
   x) 7)))` is 0, `(vanish (derivative x y))` is 0, `(vanish (derivative x x))` is 1, `(vanish
   (derivative x (pow x 2)))` is `(* 2 x)`); provides feature `test-differential`.
@@ -860,7 +870,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/reduction/test-reduction.el`
 
 - **Language:** Emacs Lisp (`lexical-binding: t`), ERT test file.
-  **Lines:** 32.
+  **Lines:** 40.
 - **Symbols:** `vl-test-basic-vanishing`, `vl-test-normalize-nary-product`,
   `vl-test-under-constraints`, `vl-test-serialization` (ert-deftest); provides feature
   `test-reduction`.
@@ -908,7 +918,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 
 - **Language:** Emacs Lisp (`lexical-binding: t`), batch end-to-end test script (run with `emacs
   --batch -l ob-lean4-test.el`).
-  **Lines:** 75.
+  **Lines:** 83.
 - **Symbols:** no defun/defvar/provided feature; top-level script printing one marker line per
   check: `EXEC1`, `EXEC-ERR`, `GENLINES`, `LAKEP`, `TOOLCHAIN`, `SESS1` / `SESS2`, `SESS1-AGAIN`,
   `EDIT-BUF` / `EDIT-CONTENTS` / `ORG-AFTER-EDIT` (or `EDIT-ERROR`). Ends with `(kill-emacs 0)`.
@@ -935,28 +945,28 @@ Grand total 15,873 text lines plus 2 PNG images.
 
 | File | Lines | Role |
 |---|---|---|
-| `vanish-lisp/elf/abi/ABI.md` | 60 | Specifies the VANISH-LISP ELF ABI (sections, 9-byte instruction encoding, opcode table, integrity and linking rules). |
-| `vanish-lisp/elf/abi/elfio.c` | 319 | Minimal ELF64 little-endian container read/write (section headers, names, bytes) used by the writer, loader, linker and… |
-| `vanish-lisp/elf/abi/elfio.h` | 39 | Declares the minimal ELF64 section/file types and read/write/find/free API. |
-| `vanish-lisp/elf/abi/opcodes.h` | 69 | Defines the opcode values, section names and note constants exactly once for the writer, loader, linker and VM. |
-| `vanish-lisp/elf/abi/sha256.c` | 132 | SHA-256 (FIPS 180-4) as one-shot and streaming digest plus lowercase hex encoding. |
-| `vanish-lisp/elf/abi/sha256.h` | 27 | Declares the SHA-256 context type and one-shot/streaming/hex API. |
-| `vanish-lisp/elf/abi/verify.c` | 200 | Loads an ELF image, checks the `.note.vanish` ABI version, recomputes and compares the `.vanish.hash` SHA-256 digests,… |
-| `vanish-lisp/elf/abi/verify.h` | 42 | Declares the decoded-instruction/image types and the shared load/verify/print/free API for the loader and VM. |
-| `vanish-lisp/elf/linker/vanish-link.c` | 239 | Links two ELF modules into one by dropping the first module's trailing HALT, unioning the symbol tables with remapping,… |
-| `vanish-lisp/elf/loader/vanish-load.c` | 55 | Loads and verifies an ELF object (ABI version and SHA-256 digests) and optionally dumps its instructions, AST and proof. |
-| `vanish-lisp/elf/writer/vanish-elf.c` | 410 | Parses lowered program XML, builds the symbol table in first-use order, encodes `.vanish.text`, checks the certificate… |
-| `vanish-lisp/vm/vanish-vm.c` | 242 | Executes the `.vanish.text` stack machine over integer polynomials in normal form, verifying hashes on load and on… |
-| `vanish-lisp/math/poly.c` | 398 | Integer polynomial normal-form arithmetic (interned variables, sorted terms, like-term combination, zero dropping) used… |
-| `vanish-lisp/math/poly.h` | 70 | Declares the integer polynomial representation (terms sorted by a fixed monomial order, zero polynomial = empty term… |
-| `vanish-lisp/math/test_poly.c` | 130 | Standalone test for the polynomial layer, printing PASS/FAIL per check and exiting non-zero on any failure. |
-| `vanish-lisp/ampl/check.c` | 60 | Exact integer-arithmetic equivalent of `ampl/vanish.mod`: enumerates x in {-1, 1}, checks x^4 - 1 vanishes there, and… |
-| `vanish-lisp/ampl/vanish.mod` | 6 | Specifies the optimization problem: maximize (x^4 - 1)^2 subject to x^2 - 1 = 0. |
+| `vanish-lisp/elf/abi/ABI.md` | 69 | Specifies the VANISH-LISP ELF ABI (sections, 9-byte instruction encoding, opcode table, integrity and linking rules). |
+| `vanish-lisp/elf/abi/elfio.c` | 329 | Minimal ELF64 little-endian container read/write (section headers, names, bytes) used by the writer, loader, linker and… |
+| `vanish-lisp/elf/abi/elfio.h` | 49 | Declares the minimal ELF64 section/file types and read/write/find/free API. |
+| `vanish-lisp/elf/abi/opcodes.h` | 79 | Defines the opcode values, section names and note constants exactly once for the writer, loader, linker and VM. |
+| `vanish-lisp/elf/abi/sha256.c` | 142 | SHA-256 (FIPS 180-4) as one-shot and streaming digest plus lowercase hex encoding. |
+| `vanish-lisp/elf/abi/sha256.h` | 37 | Declares the SHA-256 context type and one-shot/streaming/hex API. |
+| `vanish-lisp/elf/abi/verify.c` | 210 | Loads an ELF image, checks the `.note.vanish` ABI version, recomputes and compares the `.vanish.hash` SHA-256 digests,… |
+| `vanish-lisp/elf/abi/verify.h` | 52 | Declares the decoded-instruction/image types and the shared load/verify/print/free API for the loader and VM. |
+| `vanish-lisp/elf/linker/vanish-link.c` | 249 | Links two ELF modules into one by dropping the first module's trailing HALT, unioning the symbol tables with remapping,… |
+| `vanish-lisp/elf/loader/vanish-load.c` | 65 | Loads and verifies an ELF object (ABI version and SHA-256 digests) and optionally dumps its instructions, AST and proof. |
+| `vanish-lisp/elf/writer/vanish-elf.c` | 420 | Parses lowered program XML, builds the symbol table in first-use order, encodes `.vanish.text`, checks the certificate… |
+| `vanish-lisp/vm/vanish-vm.c` | 252 | Executes the `.vanish.text` stack machine over integer polynomials in normal form, verifying hashes on load and on… |
+| `vanish-lisp/math/poly.c` | 408 | Integer polynomial normal-form arithmetic (interned variables, sorted terms, like-term combination, zero dropping) used… |
+| `vanish-lisp/math/poly.h` | 80 | Declares the integer polynomial representation (terms sorted by a fixed monomial order, zero polynomial = empty term… |
+| `vanish-lisp/math/test_poly.c` | 140 | Standalone test for the polynomial layer, printing PASS/FAIL per check and exiting non-zero on any failure. |
+| `vanish-lisp/ampl/check.c` | 70 | Exact integer-arithmetic equivalent of `ampl/vanish.mod`: enumerates x in {-1, 1}, checks x^4 - 1 vanishes there, and… |
+| `vanish-lisp/ampl/vanish.mod` | 14 | Specifies the optimization problem: maximize (x^4 - 1)^2 subject to x^2 - 1 = 0. |
 
 ### `vanish-lisp/elf/abi/ABI.md`
 
 - **Language:** Markdown prose (specification document, no code).
-  **Lines:** 60.
+  **Lines:** 69.
 - **Symbols:** specifies sections `.vanish.text`, `.vanish.ast`, `.vanish.proof`, `.vanish.sym`,
   `.vanish.hash`, `.note.vanish`, `.shstrtab`; opcodes PUSH_SYMBOL 0x01, PUSH_INT 0x02, DUP 0x03,
   ADD 0x04, SUB 0x05, MUL 0x06, POW 0x07, NORMALIZE 0x08, ASSERT_ZERO 0x09, VERIFY_PROOF 0x0A, HALT
@@ -969,7 +979,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elf/abi/elfio.c`
 
 - **Language:** C.
-  **Lines:** 319.
+  **Lines:** 329.
 - **Symbols:** exported `elf_read_file`, `elf_write_file`, `elf_find`, `elf_free` (each returns 0/-1
   where applicable); static `rd16`, `rd32`, `rd64`, `wr16`, `wr32`, `wr64`, `read_all`; macros
   `ELF_MAGIC0` 0x7f, `ELF_MAGIC1` 'E', `ELF_MAGIC2` 'L', `ELF_MAGIC3` 'F', `ELFCLASS64` 2,
@@ -982,7 +992,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elf/abi/elfio.h`
 
 - **Language:** C header.
-  **Lines:** 39.
+  **Lines:** 49.
 - **Symbols:** include guard `VANISH_ELFIO_H`; structs `elf_section_t` (`char *name`, `uint32_t
   type`, `uint64_t flags`, `uint8_t *data`, `uint64_t size`), `elf_file_t` (`elf_section_t
   *sections`, `size_t nsections`); declarations `elf_read_file`, `elf_write_file`, `elf_find`,
@@ -993,7 +1003,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elf/abi/opcodes.h`
 
 - **Language:** C header.
-  **Lines:** 69.
+  **Lines:** 79.
 - **Symbols:** include guard `VANISH_OPCODES_H`; macros `VANISH_ABI_VERSION` 1, `VANISH_INSTR_SIZE`
   9; opcodes `OP_PUSH_SYMBOL` 0x01, `OP_PUSH_INT` 0x02, `OP_DUP` 0x03, `OP_ADD` 0x04, `OP_SUB` 0x05,
   `OP_MUL` 0x06, `OP_POW` 0x07, `OP_NORMALIZE` 0x08, `OP_ASSERT_ZERO` 0x09, `OP_VERIFY_PROOF` 0x0A,
@@ -1007,7 +1017,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elf/abi/sha256.c`
 
 - **Language:** C.
-  **Lines:** 132.
+  **Lines:** 142.
 - **Symbols:** exported `sha256_init`, `sha256_update`, `sha256_final`, `sha256` (one-shot),
   `sha256_hex`; static `k[64]` round-constant table, `sha256_block`; macros `ROTR`, `CH`, `MAJ`,
   `EP0`, `EP1`, `SIG0`, `SIG1`; initial state constants 0x6a09e667, 0xbb67ae85, 0x3c6ef372,
@@ -1019,7 +1029,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elf/abi/sha256.h`
 
 - **Language:** C header.
-  **Lines:** 27.
+  **Lines:** 37.
 - **Symbols:** include guard `VANISH_SHA256_H`; macro `SHA256_DIGEST_SIZE` 32; struct `sha256_ctx`
   (`uint32_t state[8]`, `uint64_t bitlen`, `uint8_t data[64]`, `size_t datalen`); declarations
   `sha256_init`, `sha256_update`, `sha256_final`, `sha256`, `sha256_hex`.
@@ -1029,7 +1039,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elf/abi/verify.c`
 
 - **Language:** C.
-  **Lines:** 200.
+  **Lines:** 210.
 - **Symbols:** exported `vanish_verify_hashes` (0 on match, -1 on failure), `vanish_image_load`,
   `vanish_print_instructions`, `vanish_image_free`; static `rd64le`, `check_note`. No `main`.
 - **Dependencies:** local headers `"verify.h"`, `"sha256.h"`; libc `<stdlib.h>`, `<string.h>` (plus
@@ -1040,7 +1050,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elf/abi/verify.h`
 
 - **Language:** C header.
-  **Lines:** 42.
+  **Lines:** 52.
 - **Symbols:** include guard `VANISH_VERIFY_H`; structs `vanish_instr_t` (`uint8_t op`, `int64_t
   operand`), `vanish_image_t` (`elf_file_t elf`, `char **syms`, `size_t nsyms`, `vanish_instr_t
   *instrs`, `size_t ninstrs`); declarations `vanish_image_load`, `vanish_verify_hashes`,
@@ -1053,7 +1063,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elf/linker/vanish-link.c`
 
 - **Language:** C (executable, `main`).
-  **Lines:** 239.
+  **Lines:** 249.
 - **Symbols:** `int main(int argc, char **argv)`; CLI `vanish-link -o out.elf a.elf b.elf` (exactly
   5 arguments; usage error returns 2); static `wr32le`, `free_syms`. Uses `OP_HALT` (both modules
   must end in HALT) and `OP_PUSH_SYMBOL` (operands remapped through the unioned symbol table). Exit
@@ -1068,7 +1078,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elf/loader/vanish-load.c`
 
 - **Language:** C (executable, `main`).
-  **Lines:** 55.
+  **Lines:** 65.
 - **Symbols:** `int main(int argc, char **argv)`; CLI `vanish-load file.elf [--dump]` (2 or 3
   arguments; usage error returns 2). Exit codes: 2 usage, 1 load failure, 0 success (prints `OK
   note:`, `OK hashes:`, `OK instructions:`, `OK symbols:`, `OK ast:`, `OK proof:`, `LOAD OK`; with
@@ -1081,7 +1091,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/elf/writer/vanish-elf.c`
 
 - **Language:** C (executable, `main`).
-  **Lines:** 410.
+  **Lines:** 420.
 - **Symbols:** `int main(int argc, char **argv)`; CLI `vanish-elf -o out.elf program.xml ast.xml
   cert.xml` (exactly 6 arguments; usage error returns 2); static `read_file`, `opcode_number` (maps
   opcode name strings to `OP_PUSH_SYMBOL` … `OP_HALT`, -1 for unknown), `trim_dup`, `parse_program`,
@@ -1099,7 +1109,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/vm/vanish-vm.c`
 
 - **Language:** C (executable, `main`).
-  **Lines:** 242.
+  **Lines:** 252.
 - **Symbols:** `int main(int argc, char **argv)`; CLI `vanish-vm file.elf` (exactly 2 arguments;
   usage error returns 2); macro `STACK_MAX` 1024; static `poly_t *stack[STACK_MAX]`, `sp`,
   `stack_push`, `stack_pop`, `stack_top`, `stack_free_all`. Handles all 11 opcodes (values from
@@ -1116,7 +1126,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/math/poly.c`
 
 - **Language:** C.
-  **Lines:** 398.
+  **Lines:** 408.
 - **Symbols:** exported `poly_var_index`, `poly_var_name`, `poly_new`, `poly_free`, `poly_copy`,
   `poly_normalize`, `poly_const`, `poly_var`, `poly_is_zero`, `poly_equal`, `poly_is_const`,
   `poly_add`, `poly_neg`, `poly_sub`, `poly_mul`, `poly_pow`, `poly_to_string`; static macro
@@ -1131,7 +1141,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/math/poly.h`
 
 - **Language:** C header.
-  **Lines:** 70.
+  **Lines:** 80.
 - **Symbols:** include guard `VANISH_POLY_H`; structs `poly_factor_t` (`int var`, `int exp`,
   exponent >= 1), `poly_term_t` (`int64_t coeff`, `poly_factor_t *factors`, `size_t nfactors`),
   `poly_t` (`poly_term_t *terms`, `size_t nterms`, `size_t cap`); declarations for all poly.c
@@ -1143,7 +1153,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/math/test_poly.c`
 
 - **Language:** C (executable, `main`).
-  **Lines:** 130.
+  **Lines:** 140.
 - **Symbols:** `int main(void)`; static `failures`, `check`, `check_str`. Checks (as printed): "x -
   x = 0", "x - x prints 0", "x * 0 = 0", "x * 1 = x", "x + 0 = x", "x^0 = 1", "x^1 = x", "(x+1)^2"
   (expects `"x^2 + 2*x + 1"`), "(x-1)(x+1) = x^2 - 1", "x^2 - 1", "2x + 3x" (expects `"5*x"`), "xy +
@@ -1156,7 +1166,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/ampl/check.c`
 
 - **Language:** C (executable, `main`).
-  **Lines:** 60.
+  **Lines:** 70.
 - **Symbols:** `int main(void)`; static `ipow`, static data `feasible[] = {-1, 1}`. Exit codes: 1 if
   any feasible x fails the manifold check `x^2 - 1 == 0` or the maximum violation is non-zero; 0
   with `AMPL check PASS: certified global maximum 0, x^4 - 1 vanishes on S` when the maximum
@@ -1168,7 +1178,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/ampl/vanish.mod`
 
 - **Language:** AMPL modeling language (specification for a solver; not executable by itself).
-  **Lines:** 6.
+  **Lines:** 14.
 - **Symbols:** AMPL declarations, verbatim: `var x;`, `var residual = x^4 - 1;`, `subject to
   manifold: x^2 - 1 = 0;`, `maximize violation: residual^2;`. No functions, structs, macros, CLI
   flags or entry points. No exit codes.
@@ -1181,32 +1191,32 @@ Grand total 15,873 text lines plus 2 PNG images.
 
 | File | Lines | Role |
 |---|---|---|
-| `vanish-lisp/xslt/canonicalize.xsl` | 30 | Semantics-preserving structural canonicalization of vanish XML (strip ignorable whitespace, normalize integer/symbol… |
-| `vanish-lisp/xslt/certificates.xsl` | 57 | Emits the certificate XML for one compiled program: target AST, lowered program, Lean certificate reference, witness,… |
-| `vanish-lisp/xslt/lower.xsl` | 63 | Declarative compiler lowering from vanish XML to the stack-machine program. |
-| `vanish-lisp/openmath/content-mathml-to-openmath.xsl` | 77 | Converts Content MathML to OpenMath. |
-| `vanish-lisp/openmath/omdoc/vanish.omdoc` | 122 | OMDoc theory of the vanishing calculus holding the vanishes assertion, the rewrite rules as axioms, and the soundness… |
-| `vanish-lisp/openmath/openmath-to-vanish.xsl` | 99 | Converts OpenMath to vanish XML for the polynomial core (arith1 minus/plus/times/power and the vanish1 vanishes… |
-| `vanish-lisp/openmath/quartic-mathml.xml` | 15 | Content MathML example instance for the quartic equation x^4 − 1 = 0. |
-| `vanish-lisp/openmath/quartic.om` | 15 | OpenMath example instance for the quartic equation x^4 − 1 = 0. |
-| `vanish-lisp/openmath/sub-self.om` | 10 | OpenMath example instance for the assertion that x − x vanishes. |
-| `vanish-lisp/openmath/vanish-to-openmath.xsl` | 61 | Converts vanish XML to OpenMath (the reverse of openmath-to-vanish.xsl). |
-| `vanish-lisp/openmath/vanish1.ocd` | 36 | Defines the vanish1 OpenMath content dictionary with its single symbol `vanishes`. |
-| `vanish-lisp/sgml/grammar.sgml` | 18 | SGML grammar document instantiating the vanish DTD with the (vanish (- x x)) example. |
-| `vanish-lisp/sgml/vanish.dtd` | 8 | Structural specification (DTD) for the vanish XML language. |
-| `vanish-lisp/dsssl/reduction.dsl` | 53 | DSSSL symbolic reduction rules for VANISH-LISP (the Scheme layer of the pipeline). |
-| `vanish-lisp/dsssl/semantics.dsl` | 45 | DSSSL denotational mapping rules for VANISH-LISP — what every expression denotes over the integers. |
+| `vanish-lisp/xslt/canonicalize.xsl` | 39 | Semantics-preserving structural canonicalization of vanish XML (strip ignorable whitespace, normalize integer/symbol… |
+| `vanish-lisp/xslt/certificates.xsl` | 66 | Emits the certificate XML for one compiled program: target AST, lowered program, Lean certificate reference, witness,… |
+| `vanish-lisp/xslt/lower.xsl` | 72 | Declarative compiler lowering from vanish XML to the stack-machine program. |
+| `vanish-lisp/openmath/content-mathml-to-openmath.xsl` | 86 | Converts Content MathML to OpenMath. |
+| `vanish-lisp/openmath/omdoc/vanish.omdoc` | 131 | OMDoc theory of the vanishing calculus holding the vanishes assertion, the rewrite rules as axioms, and the soundness… |
+| `vanish-lisp/openmath/openmath-to-vanish.xsl` | 108 | Converts OpenMath to vanish XML for the polynomial core (arith1 minus/plus/times/power and the vanish1 vanishes… |
+| `vanish-lisp/openmath/quartic-mathml.xml` | 24 | Content MathML example instance for the quartic equation x^4 − 1 = 0. |
+| `vanish-lisp/openmath/quartic.om` | 24 | OpenMath example instance for the quartic equation x^4 − 1 = 0. |
+| `vanish-lisp/openmath/sub-self.om` | 19 | OpenMath example instance for the assertion that x − x vanishes. |
+| `vanish-lisp/openmath/vanish-to-openmath.xsl` | 70 | Converts vanish XML to OpenMath (the reverse of openmath-to-vanish.xsl). |
+| `vanish-lisp/openmath/vanish1.ocd` | 45 | Defines the vanish1 OpenMath content dictionary with its single symbol `vanishes`. |
+| `vanish-lisp/sgml/grammar.sgml` | 27 | SGML grammar document instantiating the vanish DTD with the (vanish (- x x)) example. |
+| `vanish-lisp/sgml/vanish.dtd` | 17 | Structural specification (DTD) for the vanish XML language. |
+| `vanish-lisp/dsssl/reduction.dsl` | 61 | DSSSL symbolic reduction rules for VANISH-LISP (the Scheme layer of the pipeline). |
+| `vanish-lisp/dsssl/semantics.dsl` | 53 | DSSSL denotational mapping rules for VANISH-LISP — what every expression denotes over the integers. |
 | `vanish-lisp/certificates/ex1.cert.xml` | 0 | Certificate for x − x, asserting it vanishes with remainder 0 and no generators/quotients. |
 | `vanish-lisp/certificates/ex2.cert.xml` | 0 | Certificate for x^4 − 1, asserting it vanishes with generator x^2 − 1, quotient x^2 + 1, and remainder 0. |
 | `vanish-lisp/certificates/ex3.cert.xml` | 0 | Certificate for x − y, recording the non-vanishing remainder x − y with no generators/quotients. |
 | `vanish-lisp/certificates/ex4.cert.xml` | 0 | Certificate for x * 0, asserting it vanishes with remainder 0 and no generators/quotients. |
-| `vanish-lisp/ir/contract.md` | 61 | Cross-language IR and verification contract separating symbolic discovery (Emacs Lisp / POP-11) from formal… |
-| `vanish-lisp/ir/grammar.ebnf` | 54 | Defines the S-expression Intermediate Representation (IR) grammar (version 0.1.0) shared by the Emacs Lisp, POP-11, and… |
+| `vanish-lisp/ir/contract.md` | 70 | Cross-language IR and verification contract separating symbolic discovery (Emacs Lisp / POP-11) from formal… |
+| `vanish-lisp/ir/grammar.ebnf` | 64 | Defines the S-expression Intermediate Representation (IR) grammar (version 0.1.0) shared by the Emacs Lisp, POP-11, and… |
 
 ### `vanish-lisp/xslt/canonicalize.xsl`
 
 - **Language:** XSLT 1.0; output XML, indent no, no XML declaration.
-  **Lines:** 30.
+  **Lines:** 39.
 - **Symbols:** `xsl:template match="@*|node()"` (identity copy); `xsl:template match="integer"`
   (emits `<integer>` with `number(normalize-space(.))`); `xsl:template match="symbol"` (emits
   `<symbol>` with `normalize-space(.)`). No named templates, no parameters. `xsl:strip-space
@@ -1219,7 +1229,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/xslt/certificates.xsl`
 
 - **Language:** XSLT 1.0; output XML, indent no, no XML declaration.
-  **Lines:** 57.
+  **Lines:** 66.
 - **Symbols:** `xsl:template match="/"` (only template; emits `<certificate>` with `<target>`,
   `<program>`, `<lean>`, `<witness>`, `<hashes>`). Parameters: `ast-uri` (no default), `ast-hash`
   (no default), `program-hash` (no default), `lean-module` (default `Vanish.Certificate`),
@@ -1235,7 +1245,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/xslt/lower.xsl`
 
 - **Language:** XSLT 1.0; output XML, indent no, no XML declaration.
-  **Lines:** 63.
+  **Lines:** 72.
 - **Symbols:** `xsl:template match="/"` (emits `<program>`, applies templates, then appends
   `<instruction opcode="NORMALIZE"/>`, `<instruction opcode="ASSERT_ZERO"/>`, `<instruction
   opcode="VERIFY_PROOF"/>`, `<instruction opcode="HALT"/>`); `xsl:template match="vanish|expr"`
@@ -1249,7 +1259,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/openmath/content-mathml-to-openmath.xsl`
 
 - **Language:** XSLT 1.0; output XML, indent no, no XML declaration.
-  **Lines:** 77.
+  **Lines:** 86.
 - **Symbols:** `xsl:template match="math"` (emits `<OMOBJ>`); `xsl:template match="apply[eq]"`
   (relation1 eq); `xsl:template match="apply[minus]"` (arith1 minus); `xsl:template
   match="apply[plus]"` (arith1 plus); `xsl:template match="apply[times]"` (arith1 times);
@@ -1263,7 +1273,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/openmath/omdoc/vanish.omdoc`
 
 - **Language:** OMDoc XML (no XML declaration; no namespace declared).
-  **Lines:** 122.
+  **Lines:** 131.
 - **Symbols:** root `<omdoc>`; `<theory id="vanish">`; symbols `vanishes`, `reduce`, `normalize`;
   axioms `ax-vanishes`, `ax-subSelf`, `ax-mulZero`, `ax-addZero`, `ax-powOne` (each with
   `<FMP>`/`<OMOBJ>` and `<CMP>`); theorem `th-soundness` with `<FMP>`, `<CMP>`, and
@@ -1278,7 +1288,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/openmath/openmath-to-vanish.xsl`
 
 - **Language:** XSLT 1.0; output XML, indent no, no XML declaration.
-  **Lines:** 99.
+  **Lines:** 108.
 - **Symbols:** `xsl:template match="OMOBJ"` (emits `<vanish><expr>`); `xsl:template
   match="OMA[OMS[@cd='vanish1' and @name='vanishes']]"`; `xsl:template
   match="OMA[OMS[@cd='relation1' and @name='eq']]"` (equation read as a vanishing assertion; emits
@@ -1296,7 +1306,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/openmath/quartic-mathml.xml`
 
 - **Language:** Content MathML XML (no XML declaration; no namespace).
-  **Lines:** 15.
+  **Lines:** 24.
 - **Symbols:** root `<math>`; `<apply>` containing `<eq/>`, an inner `<apply>` (`<minus/>`,
   `<apply>` (`<power/>`, `<ci>x</ci>`, `<cn>4</cn>`), `<cn>1</cn>`), and `<cn>0</cn>`. The equation
   x^4 − 1 = 0.
@@ -1306,7 +1316,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/openmath/quartic.om`
 
 - **Language:** OpenMath XML (no XML declaration; no namespace).
-  **Lines:** 15.
+  **Lines:** 24.
 - **Symbols:** root `<OMOBJ>`; `<OMA>` with `<OMS cd="relation1" name="eq"/>`, whose arguments are
   an `<OMA>` (arith1 minus of an `<OMA>` (arith1 power, OMV x, OMI 4) and OMI 1) and `<OMI>0</OMI>`.
   `eq(minus(power(x, 4), 1), 0)`.
@@ -1316,7 +1326,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/openmath/sub-self.om`
 
 - **Language:** OpenMath XML (no XML declaration; no namespace).
-  **Lines:** 10.
+  **Lines:** 19.
 - **Symbols:** root `<OMOBJ>`; `<OMA>` with `<OMS cd="vanish1" name="vanishes"/>`, whose argument is
   an `<OMA>` (arith1 minus, OMV x, OMV x). `vanishes(minus(x, x))`.
 - **Dependencies:** OpenMath CDs vanish1 (vanishes) and arith1 (minus).
@@ -1325,7 +1335,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/openmath/vanish-to-openmath.xsl`
 
 - **Language:** XSLT 1.0; output XML, indent no, no XML declaration.
-  **Lines:** 61.
+  **Lines:** 70.
 - **Symbols:** `xsl:template match="vanish"` (emits `<OMOBJ><OMA>` with `<OMS cd="vanish1"
   name="vanishes"/>`, applies templates to `expr/*[1]`); `xsl:template match="sub"` (arith1 minus);
   `...add` (plus); `...mul` (times); `...pow` (power); `xsl:template match="symbol"` (OMV);
@@ -1336,7 +1346,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/openmath/vanish1.ocd`
 
 - **Language:** OpenMath Content Dictionary XML (`.ocd`; no namespace).
-  **Lines:** 36.
+  **Lines:** 45.
 - **Symbols:** root `<CD>`; CDName `vanish1`; CDURL `https://example.org/cd/vanish1`; CDReviewDate
   2027-11-24; CDDate 2026-11-24; CDStatus `experimental`; CDVersion 1; CDRevision 0; Description
   "Vanishing calculus"; one `<CDDefinition>` with symbol `<Name> vanishes </Name>`, description
@@ -1352,7 +1362,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/sgml/grammar.sgml`
 
 - **Language:** SGML document instance (no XML declaration; SGML, not XML).
-  **Lines:** 18.
+  **Lines:** 27.
 - **Symbols:** `<!DOCTYPE vanish SYSTEM "vanish.dtd">`; root `<vanish>` containing `<expr><sub>`
   with two `<expr><symbol>x</symbol></expr>` children — the (vanish (- x x)) example. No
   ELEMENT/ATTLIST declarations in this file.
@@ -1367,7 +1377,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 
 - **Language:** SGML/XML DTD (element declarations with SGML start-tag/end-tag minimization
   indicators `- -`).
-  **Lines:** 8.
+  **Lines:** 17.
 - **Symbols:** 8 ELEMENT declarations, 0 ATTLIST declarations: `<!ELEMENT vanish - - (expr)>`,
   `<!ELEMENT expr - - (sub|add|mul|pow|symbol|integer)>`, `<!ELEMENT sub - - (expr,expr)>`,
   `<!ELEMENT add - - (expr,expr)>`, `<!ELEMENT mul - - (expr,expr)>`, `<!ELEMENT pow - -
@@ -1379,7 +1389,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 
 - **Language:** DSSSL / Scheme (ISO/IEC 10179:1996 DSSSL, per the file header; Scheme-style `define`
   forms).
-  **Lines:** 53.
+  **Lines:** 61.
 - **Symbols:** `vanish-sub`, `vanish-mul`, `vanish-add`, `vanish-pow`, `vanish-neg`,
   `vanish-normalize`. Rules: sub of equal operands → 0; mul with a 0 operand → 0; add with a 0
   operand → the other operand; pow with exponent 0 → 1, exponent 1 → the base; neg of 0 → 0;
@@ -1393,7 +1403,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/dsssl/semantics.dsl`
 
 - **Language:** DSSSL / Scheme (ISO/IEC 10179:1996 DSSSL).
-  **Lines:** 45.
+  **Lines:** 53.
 - **Symbols:** `denote` (expr env) — evaluates numbers, symbols via association-list lookup (error
   "denote: unbound symbol" if unbound), empty expression (error), and `add`/`sub`/`mul`/`pow`/`-`
   operator forms (error "denote: unknown operator" otherwise); `vanishes?` (true when `(denote expr
@@ -1466,7 +1476,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/ir/contract.md`
 
 - **Language:** Markdown contract document.
-  **Lines:** 61.
+  **Lines:** 70.
 - **Symbols:** sections 1. Overview (three layers: Elisp, POP-11, Lean 4); 2. Serialization Mapping
   (table: integer literal, variable, addition, subtraction, negation, multiplication, power,
   constraint, under, derivative, ideal — each with Emacs Lisp S-exp, POP-11 tagged list, and Lean 4
@@ -1482,7 +1492,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/ir/grammar.ebnf`
 
 - **Language:** EBNF grammar (ISO/IEC 14977-style `(* … *)` comments).
-  **Lines:** 54.
+  **Lines:** 64.
 - **Symbols:** 20 productions: `program`, `form`, `vanish-form`, `reduce-form`, `normalize-form`,
   `under-form`, `deriv-form`, `ideal-form`, `residue-form`, `witness-form`, `seal-form`,
   `constraint`, `expr`, `verdict`, `certificate`, `symbol`, `integer`, `nonneg-int`, `letter`,
@@ -1499,28 +1509,28 @@ Grand total 15,873 text lines plus 2 PNG images.
 
 | File | Lines | Role |
 |---|---|---|
-| `vanish-lisp/tests/check_dtd.exs` | 127 | Validate vanish XML documents against the ELEMENT content models parsed from the SGML DTD (the G_grammar gate). |
-| `vanish-lisp/tests/check_dump.exs` | 48 | Check that the ELF loader's `--dump` AST section, stripped, equals the canonical vanish XML (part of the G_binary gate). |
-| `vanish-lisp/tests/check_om.exs` | 76 | Check an OpenMath round-trip is either identical to the original or the `vanishes()` wrapping of it (part of the… |
-| `vanish-lisp/tests/correspondence.exs` | 492 | Exhaustively differentially test the XSLT lowering against the Lean compiler and the formalized lowering over every… |
-| `vanish-lisp/tests/program_to_text.exs` | 59 | Render a lowered program XML as instruction text, one instruction per line, in the same form Lean's `instrToText`… |
-| `vanish-lisp/tests/xslt.exs` | 44 | Drive an XSLT 1.0 stylesheet through libxslt via xsltproc and write the result to stdout. |
-| `vanish-lisp/tests/correspondence.sh` | 17 | Run the exhaustive correspondence corpus check and report its verdict. |
-| `vanish-lisp/tests/run_pipeline.sh` | 205 | Run the full end-to-end pipeline on the four examples and apply the admission gate `Admit(M) = G_grammar AND… |
-| `vanish-lisp/tests/examples/ex1.sexp` | 1 | Pipeline example 1 — `x - x`, which vanishes identically (expected VM outcome: passes ASSERT_ZERO, exit 0). |
-| `vanish-lisp/tests/examples/ex2.sexp` | 1 | Pipeline example 2 — `x^4 - 1`, whose vanishing is conditional on `x^2 - 1 = 0` via the ideal certificate (expected… |
-| `vanish-lisp/tests/examples/ex3.sexp` | 1 | Pipeline example 3 — `x - y`, which does not vanish (expected VM outcome: fails ASSERT_ZERO with residual `x - y`). |
-| `vanish-lisp/tests/examples/ex4.sexp` | 1 | Pipeline example 4 — `x * 0`, which vanishes by a rewrite rule (expected VM outcome: passes ASSERT_ZERO, exit 0). |
-| `vanish-lisp/tests/algebra/ideal-cases.p` | 10 | POP-11 ideal-membership test cases for the vanish evaluator and canonical normalizer. |
-| `vanish-lisp/gherkin/runner.rkt` | 543 | Parse a Gherkin `.feature` file and dispatch each step to a real pipeline stage, reporting pass/fail per scenario. |
-| `vanish-lisp/gherkin/vanishing.feature` | 43 | Specify the four Gherkin scenarios for the vanishing calculus: vanishing under constraints, unresolved obligation, ELF… |
-| `vanish-lisp/verify.sh` | 69 | Verify the vanish-lisp tree by running the Lean build, the Elisp ERT suites, and the Elisp byte-compile check, exiting… |
-| `vanish-lisp/Makefile` | 22 | Standard build/test entry points for the Elisp suites, the POP-11 ideal cases, and the Lean build. |
+| `vanish-lisp/tests/check_dtd.exs` | 135 | Validate vanish XML documents against the ELEMENT content models parsed from the SGML DTD (the G_grammar gate). |
+| `vanish-lisp/tests/check_dump.exs` | 56 | Check that the ELF loader's `--dump` AST section, stripped, equals the canonical vanish XML (part of the G_binary gate). |
+| `vanish-lisp/tests/check_om.exs` | 84 | Check an OpenMath round-trip is either identical to the original or the `vanishes()` wrapping of it (part of the… |
+| `vanish-lisp/tests/correspondence.exs` | 500 | Exhaustively differentially test the XSLT lowering against the Lean compiler and the formalized lowering over every… |
+| `vanish-lisp/tests/program_to_text.exs` | 67 | Render a lowered program XML as instruction text, one instruction per line, in the same form Lean's `instrToText`… |
+| `vanish-lisp/tests/xslt.exs` | 52 | Drive an XSLT 1.0 stylesheet through libxslt via xsltproc and write the result to stdout. |
+| `vanish-lisp/tests/correspondence.sh` | 25 | Run the exhaustive correspondence corpus check and report its verdict. |
+| `vanish-lisp/tests/run_pipeline.sh` | 213 | Run the full end-to-end pipeline on the four examples and apply the admission gate `Admit(M) = G_grammar AND… |
+| `vanish-lisp/tests/examples/ex1.sexp` | 9 | Pipeline example 1 — `x - x`, which vanishes identically (expected VM outcome: passes ASSERT_ZERO, exit 0). |
+| `vanish-lisp/tests/examples/ex2.sexp` | 9 | Pipeline example 2 — `x^4 - 1`, whose vanishing is conditional on `x^2 - 1 = 0` via the ideal certificate (expected… |
+| `vanish-lisp/tests/examples/ex3.sexp` | 9 | Pipeline example 3 — `x - y`, which does not vanish (expected VM outcome: fails ASSERT_ZERO with residual `x - y`). |
+| `vanish-lisp/tests/examples/ex4.sexp` | 9 | Pipeline example 4 — `x * 0`, which vanishes by a rewrite rule (expected VM outcome: passes ASSERT_ZERO, exit 0). |
+| `vanish-lisp/tests/algebra/ideal-cases.p` | 18 | POP-11 ideal-membership test cases for the vanish evaluator and canonical normalizer. |
+| `vanish-lisp/gherkin/runner.rkt` | 551 | Parse a Gherkin `.feature` file and dispatch each step to a real pipeline stage, reporting pass/fail per scenario. |
+| `vanish-lisp/gherkin/vanishing.feature` | 51 | Specify the four Gherkin scenarios for the vanishing calculus: vanishing under constraints, unresolved obligation, ELF… |
+| `vanish-lisp/verify.sh` | 77 | Verify the vanish-lisp tree by running the Lean build, the Elisp ERT suites, and the Elisp byte-compile check, exiting… |
+| `vanish-lisp/Makefile` | 30 | Standard build/test entry points for the Elisp suites, the POP-11 ideal cases, and the Lean build. |
 
 ### `vanish-lisp/tests/check_dtd.exs`
 
 - **Language:** Elixir script (`#!/usr/bin/env elixir`), module `CheckDtd`.
-  **Lines:** 127.
+  **Lines:** 135.
 - **Symbols:** entry point `CheckDtd.main(System.argv())`; usage `elixir tests/check_dtd.exs
   sgml/vanish.dtd FILE.xml [FILE.xml ...]` (no named flags; first positional arg is the DTD path,
   remaining args are XML files). Functions: `main/1`, `usage_error/0`, `parse_dtd/1`,
@@ -1536,7 +1546,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/check_dump.exs`
 
 - **Language:** Elixir script (`#!/usr/bin/env elixir`), module `CheckDump`.
-  **Lines:** 48.
+  **Lines:** 56.
 - **Symbols:** entry point `CheckDump.main(System.argv())`; usage `elixir tests/check_dump.exs DUMP
   CANON.xml` (exactly two positional args, no flags). Functions: `main/1`, `usage_error/0`,
   `extract_ast/1`. Exit codes: 0 on success (prints `check_dump: loader round-trip reconstructs the
@@ -1549,7 +1559,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/check_om.exs`
 
 - **Language:** Elixir script (`#!/usr/bin/env elixir`), module `CheckOm`.
-  **Lines:** 76.
+  **Lines:** 84.
 - **Symbols:** entry point `CheckOm.main(System.argv())`; usage `elixir tests/check_om.exs
   ROUNDTRIP.om ORIGINAL.om` (exactly two positional args, no flags). Functions: `main/1`,
   `usage_error/0`, `parse/1`, `normalize/1` (three clauses), `vanishes_wrapping?/2` (two clauses).
@@ -1563,7 +1573,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/correspondence.exs`
 
 - **Language:** Elixir script (`#!/usr/bin/env elixir`), module `Correspondence`.
-  **Lines:** 492.
+  **Lines:** 500.
 - **Symbols:** entry point `Correspondence.main(System.argv())`; usage `elixir
   tests/correspondence.exs` (full corpus) and `elixir tests/correspondence.exs --one SEXPR` (one
   expression). Functions: `main/1`, `usage_error/0`, `pass/2`, `corpus/0`, `depth_one/1`,
@@ -1594,7 +1604,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/program_to_text.exs`
 
 - **Language:** Elixir script (`#!/usr/bin/env elixir`), module `ProgramToText`.
-  **Lines:** 59.
+  **Lines:** 67.
 - **Symbols:** entry point `ProgramToText.main(System.argv())`; usage `elixir
   tests/program_to_text.exs PROGRAM.xml` (exactly one positional arg, no flags). Functions:
   `main/1`, `usage_error/0`, `instructions/1` (two clauses), `attr/2`, `text_content/1`. Exit codes:
@@ -1609,7 +1619,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/xslt.exs`
 
 - **Language:** Elixir script (`#!/usr/bin/env elixir`), module `Xslt`.
-  **Lines:** 44.
+  **Lines:** 52.
 - **Symbols:** entry point `Xslt.main(System.argv())`; usage `elixir tests/xslt.exs STYLESHEET INPUT
   [name=value ...]` (two positional args plus zero or more `name=value` stylesheet parameters, no
   other flags). Functions: `main/1`, `usage_error/1`. Each `name=value` parameter is passed to
@@ -1625,7 +1635,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/correspondence.sh`
 
 - **Language:** Bash script (`#!/bin/bash`).
-  **Lines:** 17.
+  **Lines:** 25.
 - **Symbols:** no functions; no flags of its own — all arguments are forwarded verbatim (`"$@"`) to
   `tests/correspondence.exs`. Commands, in order: (1) sets `ROOT` to the parent directory of the
   script's directory; (2) prepends `$HOME/.elan/bin` to `PATH`; (3) exports
@@ -1639,7 +1649,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/run_pipeline.sh`
 
 - **Language:** Bash script (`#!/bin/bash`).
-  **Lines:** 205.
+  **Lines:** 213.
 - **Symbols:** no CLI flags parsed (no usage line in the file). Internal shell functions: `say/0`,
   `note/0`, `fail/0` (increments `FAILURES`), `check/0` (`check DESCRIPTION COMMAND...`, runs the
   command logging to `$WORK/last.log`, notes `ok: <desc>` or fails with `FAIL: <desc> (see
@@ -1673,7 +1683,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/examples/ex1.sexp`
 
 - **Language:** S-expression (Scheme/Lisp surface syntax, data file).
-  **Lines:** 1.
+  **Lines:** 9.
 - **Symbols:** none. Exact expression: `(vanish (- x x))`.
 - **Dependencies:** none.
 - **Responsibility:** Pipeline example 1 — `x - x`, which vanishes identically (expected VM outcome:
@@ -1682,7 +1692,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/examples/ex2.sexp`
 
 - **Language:** S-expression (Scheme/Lisp surface syntax, data file).
-  **Lines:** 1.
+  **Lines:** 9.
 - **Symbols:** none. Exact expression: `(- (pow x 4) 1)`.
 - **Dependencies:** none.
 - **Responsibility:** Pipeline example 2 — `x^4 - 1`, whose vanishing is conditional on `x^2 - 1 =
@@ -1691,7 +1701,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/examples/ex3.sexp`
 
 - **Language:** S-expression (Scheme/Lisp surface syntax, data file).
-  **Lines:** 1.
+  **Lines:** 9.
 - **Symbols:** none. Exact expression: `(- x y)`.
 - **Dependencies:** none.
 - **Responsibility:** Pipeline example 3 — `x - y`, which does not vanish (expected VM outcome:
@@ -1700,7 +1710,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/examples/ex4.sexp`
 
 - **Language:** S-expression (Scheme/Lisp surface syntax, data file).
-  **Lines:** 1.
+  **Lines:** 9.
 - **Symbols:** none. Exact expression: `(* x 0)`.
 - **Dependencies:** none.
 - **Responsibility:** Pipeline example 4 — `x * 0`, which vanishes by a rewrite rule (expected VM
@@ -1709,8 +1719,8 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/tests/algebra/ideal-cases.p`
 
 - **Language:** POP-11 (`.p` file; header comment `;;; ideal-cases.p --- POP-11 ideal membership
-  test cases`, SPDX-License-Identifier: MIT).
-  **Lines:** 10.
+  test cases`, SPDX-License-Identifier: AGPL-3.0-or-later).
+  **Lines:** 18.
 - **Symbols:** no CLI flags or functions defined. Loads `load('../../pop11/vanish.p');` then two
   test expressions, each followed by `=>` with no expected value printed in the file: (1)
   `vanish_eval([ideal [generators [sub [pow x 2] 1]] [sub [pow x 4] 1]])` — test that `x^4 - 1` is
@@ -1724,7 +1734,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/gherkin/runner.rkt`
 
 - **Language:** Racket (`#lang racket`).
-  **Lines:** 543.
+  **Lines:** 551.
 - **Symbols:** entry point `main` called as `(main (vector->list
   (current-command-line-arguments)))`; usage `runner.rkt --root REPO --work WORKDIR FEATURE`
   (printed to stdout with exit 2 if any of `--root`, `--work`, or the feature file is missing).
@@ -1761,7 +1771,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/gherkin/vanishing.feature`
 
 - **Language:** Gherkin (`.feature` file; feature `Formally verified vanishing calculus`).
-  **Lines:** 43.
+  **Lines:** 51.
 - **Symbols:** no CLI flags or functions. Four scenarios: (1) `Polynomial vanishing under
   constraints`; (2) `Unresolved mathematical obligation`; (3) `Binary round-trip preservation`; (4)
   `Compiler correspondence and stack safety`. Steps per scenario (verbatim): Scenario 1 — Given
@@ -1786,7 +1796,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/verify.sh`
 
 - **Language:** POSIX shell (`#!/bin/sh`, `set -u`).
-  **Lines:** 69.
+  **Lines:** 77.
 - **Symbols:** no functions; no CLI flags (usage comment: `./verify.sh`). Commands, in order: (1)
   `cd` to the script's own directory; (2) prepends `$HOME/.elan/bin` to `PATH`; (3) zero-Python gate
   — `find .` (pruning `.git`, `.lake`, `.pipeline-work`) for `*.py` files, then `grep -rnE` for
@@ -1811,7 +1821,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/Makefile`
 
 - **Language:** GNU Make (Makefile).
-  **Lines:** 22.
+  **Lines:** 30.
 - **Symbols:** variables `EMACS ?= emacs`, `POP11 ?= pop11`, `LAKE ?= lake`. `.PHONY: all test
   test-elisp test-pop11 build-lean clean`. Targets: `all` (depends on `build-lean`); `test-elisp`
   (runs the two `emacs --batch ... -f ert-run-tests-batch-and-exit` commands); `test-pop11` (runs
@@ -1828,54 +1838,68 @@ Grand total 15,873 text lines plus 2 PNG images.
 
 | File | Lines | Role |
 |---|---|---|
-| `README.md` | 3,322 | Exhaustive technical specification for this repository: architecture and pipeline, per-file inventory of all 122 files,… |
-| `.gitignore` | 7 | Excludes Lean build outputs, pipeline work dir, Python bytecode, and macOS metadata from version control. |
-| `.github/workflows/ci.yml` | 85 | CI definition: runs the zero-Python gate, verify.sh, C builds, calculator kernels, and the shipped pipeline (expecting… |
+| `README.md` | 3,365 | Exhaustive technical specification for this repository: architecture and pipeline, per-file inventory of all 123 files,… |
+| `LICENSE` | 661 | Full text of the AGPLv3 license under which the repository is licensed; copy of `vanish-lisp/LICENSE`, added so GitHub detects the license. |
+| `.gitignore` | 15 | Excludes Lean build outputs, pipeline work dir, Python bytecode, and macOS metadata from version control. |
+| `.github/workflows/ci.yml` | 93 | CI definition: runs the zero-Python gate, verify.sh, C builds, calculator kernels, and the shipped pipeline (expecting… |
 | `bench/bench-c.tsv` | 8 | Recorded timings and exit codes for the six C builds plus the math poly test and the AMPL exact check. |
-| `bench/bench.sh` | 38 | Benchmark harness that builds the six C stages and runs the math/AMPL tests, writing timings to a TSV. |
-| `bench/ci.sh` | 47 | Runs the CI jobs locally in the same order as the workflow and reports CI GREEN/RED in bench/ci.log. |
-| `visuals/bench-build-times.svg` | 25 | Bar chart of the six measured C build times from `bench/bench-c.tsv` (Section 4.3). |
-| `visuals/correspondence.svg` | 29 | Corrected copy of `vanish-lisp/docs/figures/correspondence.svg` with the driver label changed to `tests/xslt.exs`… |
-| `visuals/expr-tree-ex2.svg` | 27 | Expression tree for ex2 `(- (pow x 4) 1)` with the quarticCert witness (Section 3.2)… |
+| `bench/bench.sh` | 46 | Benchmark harness that builds the six C stages and runs the math/AMPL tests, writing timings to a TSV. |
+| `bench/ci.sh` | 55 | Runs the CI jobs locally in the same order as the workflow and reports CI GREEN/RED in bench/ci.log. |
+| `visuals/bench-build-times.svg` | 34 | Bar chart of the six measured C build times from `bench/bench-c.tsv` (Section 4.3). |
+| `visuals/correspondence.svg` | 38 | Corrected copy of `vanish-lisp/docs/figures/correspondence.svg` with the driver label changed to `tests/xslt.exs`… |
+| `visuals/expr-tree-ex2.svg` | 36 | Expression tree for ex2 `(- (pow x 4) 1)` with the quarticCert witness (Section 3.2)… |
 | `visuals/photo-pipeline.png` | binary | Photograph of the shipped-pipeline DENY vs no-Python mirror run, as captioned in the superseded root README.md. |
 | `visuals/photo-verify.png` | binary | Photograph of the verify.sh ALL CHECKS PASS run, as captioned in the superseded root README.md. |
-| `visuals/vanish-cycle.svg` | 35 | Static VISIBLE / HIDDEN cycle diagram (Section 1.6)… |
+| `visuals/vanish-cycle.svg` | 44 | Static VISIBLE / HIDDEN cycle diagram (Section 1.6)… |
 | `vanishing_calculator.lisp` | 187 | Standalone self-modifying Common Lisp vanishing calculator: calculates once, then hides its own engine as base64; next… |
-| `vanish-lisp/.gitignore` | 4 | Excludes Lean build outputs, compiled Elisp, the Lake manifest, and pipeline work files from version control inside… |
+| `vanish-lisp/.gitignore` | 12 | Excludes Lean build outputs, compiled Elisp, the Lake manifest, and pipeline work files from version control inside… |
 | `vanish-lisp/LICENSE` | 661 | Full text of the AGPLv3 license under which vanish-lisp is licensed. |
 | `vanish-lisp/LICENSE_HEADER.txt` | 8 | Short AGPLv3 copyright/permission header notice for VANISH-LISP. |
 | `vanish-lisp/MANIFEST.sha256` | 44 | SHA-256 manifest of the vanish-lisp tree (44 files). |
 | `vanish-lisp/MANIFEST.zip.sha256` | 29 | SHA-256 manifest of the 29 files as supplied in the original vanish-lisp.zip. |
-| `vanish-lisp/PIPELINE.md` | 313 | Complete run instructions and semantics documentation for the VANISH-LISP pipeline, including the admission gate and… |
-| `vanish-lisp/README.md` | 630 | Production README for vanish-lisp: one deep section per layer, build/reproduce instructions, CI, benchmarks,… |
-| `vanish-lisp/STATUS.md` | 388 | Dated measured-status log for vanish-lisp: what failed, what was fixed, Phase 1 correspondence results, and the… |
+| `vanish-lisp/PIPELINE.md` | 322 | Complete run instructions and semantics documentation for the VANISH-LISP pipeline, including the admission gate and… |
+| `vanish-lisp/README.md` | 639 | Production README for vanish-lisp: one deep section per layer, build/reproduce instructions, CI, benchmarks,… |
+| `vanish-lisp/STATUS.md` | 397 | Dated measured-status log for vanish-lisp: what failed, what was fixed, Phase 1 correspondence results, and the… |
 | `vanish-lisp/TEST_LOG.txt` | 74 | Stale recorded output of an early verification run (lake build failure + differential-test failure), preserved as a log. |
-| `vanish-lisp/docs/figures/admission.svg` | 28 | Diagram of the five-gate admission rule for the pipeline. |
-| `vanish-lisp/docs/figures/benchmarks.svg` | 44 | Log-scale bar chart of the measured benchmark times from `docs/figures/benchmarks.tsv`. |
+| `vanish-lisp/docs/figures/admission.svg` | 37 | Diagram of the five-gate admission rule for the pipeline. |
+| `vanish-lisp/docs/figures/benchmarks.svg` | 53 | Log-scale bar chart of the measured benchmark times from `docs/figures/benchmarks.tsv`. |
 | `vanish-lisp/docs/figures/benchmarks.tsv` | 15 | Measured wall-clock benchmark data (2026-11-24) backing the benchmark chart. |
-| `vanish-lisp/docs/figures/correspondence.svg` | 29 | Diagram of the XSLT-lowering vs Lean-compile correspondence and its trusted boundary. |
-| `vanish-lisp/docs/figures/pipeline.svg` | 46 | Diagram of the eight pipeline stages in run order, ending at the admission gate. |
-| `vanish-lisp/vanishing-calculator/.gitignore` | 2 | Excludes compiled Elisp and the compiled C calculator binary from version control inside vanishing-calculator. |
-| `vanish-lisp/vanishing-calculator/README.md` | 44 | README for the five-kernel self-modifying vanishing calculator plus the Org Babel Lean 4 bridge: files, run commands,… |
-| `vanish-lisp/vanishing-calculator/STATUS.md` | 94 | Verification status and fix log for the vanishing-calculator kernels, including the ten execution-found fixes. |
+| `vanish-lisp/docs/figures/correspondence.svg` | 38 | Diagram of the XSLT-lowering vs Lean-compile correspondence and its trusted boundary. |
+| `vanish-lisp/docs/figures/pipeline.svg` | 55 | Diagram of the eight pipeline stages in run order, ending at the admission gate. |
+| `vanish-lisp/vanishing-calculator/.gitignore` | 10 | Excludes compiled Elisp and the compiled C calculator binary from version control inside vanishing-calculator. |
+| `vanish-lisp/vanishing-calculator/README.md` | 53 | README for the five-kernel self-modifying vanishing calculator plus the Org Babel Lean 4 bridge: files, run commands,… |
+| `vanish-lisp/vanishing-calculator/STATUS.md` | 103 | Verification status and fix log for the vanishing-calculator kernels, including the ten execution-found fixes. |
 | `vanish-lisp/vanishing-calculator/TEST_LOG.txt` | 160 | Full output log of the last verify.py run for the calculator kernels: 66 checks, 0 failures. |
-| `vanish-lisp/vanishing-calculator/vanishing_calculator.c` | 242 | C core calculator: a small arena Lisp interpreter with self-modifying `vanish!`, computing fib(10) once then erasing… |
+| `vanish-lisp/vanishing-calculator/vanishing_calculator.c` | 252 | C core calculator: a small arena Lisp interpreter with self-modifying `vanish!`, computing fib(10) once then erasing… |
 | `vanish-lisp/vanishing-calculator/vanishing_calculator.lisp` | 187 | The in-repo copy of the self-modifying Common Lisp vanishing calculator (same behavior as the standalone root copy). |
-| `vanish-lisp/vanishing-calculator/vanishing_calculator.p` | 256 | Staged (not run) Poplog/Pop-11 kernel of the self-modifying vanishing calculator. |
-| `vanish-lisp/vanishing-calculator/vanishing_calculator.ps1` | 151 | PowerShell kernel of the self-modifying vanishing calculator: calculates once, hides its engine as a base64 payload,… |
+| `vanish-lisp/vanishing-calculator/vanishing_calculator.p` | 264 | Staged (not run) Poplog/Pop-11 kernel of the self-modifying vanishing calculator. |
+| `vanish-lisp/vanishing-calculator/vanishing_calculator.ps1` | 159 | PowerShell kernel of the self-modifying vanishing calculator: calculates once, hides its engine as a base64 payload,… |
 
 ### `README.md`
 
 - **Language:** Markdown.
-  **Lines:** 3,322.
+  **Lines:** 3,365.
 - **Symbols:** headings `# vanishing-calculator`; `# 1. System Architecture & Execution Pipeline`; `# 2. Complete Repository File Inventory & Module Audit`; `# 3. Wire Protocols, Schemas & Binary Layouts`; `# 4. Authentic Benchmark Suite & Empirical Telemetry`; `# 5. Build, Verification & Deterministic Reproduction`; `# 6. Version Control & Commit Lineage`; `# 7. Known Discrepancies`. Contains the badge block, a contents list, Mermaid diagrams (architecture, pipeline, correspondence, state), notation blocks quoted verbatim from the Lean sources, and embedded figures and terminal captures.
 - **Dependencies:** none (documentation only; the commands it documents use emacs-nox, racket, sbcl, xsltproc, libxml2-utils, Lean 4.12.0 via elan).
-- **Responsibility:** Exhaustive technical specification for this repository: architecture and pipeline, per-file inventory of all 122 files, wire protocols and schemas, measured benchmarks, build and verification procedure, commit lineage, and known discrepancies. Supersedes the 135-line monorepo README described in Section 7.1.
+- **Responsibility:** Exhaustive technical specification for this repository: architecture and pipeline, per-file inventory of all 123 files, wire protocols and schemas, measured benchmarks, build and verification procedure, commit lineage, and known discrepancies. Supersedes the 135-line monorepo README described in Section 7.1.
+
+### `LICENSE`
+
+- **Language:** License text (ASCII).
+  **Lines:** 661.
+- **Symbols:** GNU Affero General Public License, Version 3, 19 November 2007. Header: `GNU AFFERO
+  GENERAL PUBLIC LICENSE`, `Version 3, 19 November 2007`, `Copyright (C) 2007 Free Software
+  Foundation, Inc. <https://fsf.org/>`. Body: Preamble followed by the standard AGPLv3 terms and
+  conditions (sections 0–17 plus "How to Apply These Terms to Your New Programs"); tail references
+  `<https://www.gnu.org/licenses/>`.
+- **Dependencies:** none.
+- **Responsibility:** Full text of the AGPLv3 license under which the repository is licensed;
+  byte-for-byte copy of `vanish-lisp/LICENSE`, placed at the root so GitHub detects AGPLv3.
 
 ### `.gitignore`
 
 - **Language:** gitignore patterns.
-  **Lines:** 7.
+  **Lines:** 15.
 - **Symbols:** comment `# Build outputs. Regenerated by the pipelines; never committed.` plus
   patterns `vanish-lisp/.lake/`, `vanish-lisp/lake-manifest.json`,
   `vanish-lisp/tests/.pipeline-work/`, `*.pyc`, `__pycache__/`, `.DS_Store`.
@@ -1886,7 +1910,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `.github/workflows/ci.yml`
 
 - **Language:** GitHub Actions workflow YAML.
-  **Lines:** 85.
+  **Lines:** 93.
 - **Symbols:** workflow `name: CI`, trigger `on: [push, pull_request]`. Five jobs, all `runs-on:
   ubuntu-24.04`: (1) `zero-py` — checkout; "Fail closed on any Python file or invocation" (finds
   `*.py` files excluding `.git`/`.lake`/`.pipeline-work`; greps runnable files `*.sh`, `*.yml`,
@@ -1928,7 +1952,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `bench/bench.sh`
 
 - **Language:** Bash script (`#!/bin/bash`, executable).
-  **Lines:** 38.
+  **Lines:** 46.
 - **Symbols:** usage `bench.sh <vanish-root> <out-tsv>`; `set -u`. Defines `run_timed()` (label +
   command; times with `date +%s%N`, captures output to `/tmp/bench-last.log`, appends
   `label<TAB>seconds<TAB>exit=<rc> <first 120 chars of log>` to the TSV, echoes `label: <s>s
@@ -1947,7 +1971,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `bench/ci.sh`
 
 - **Language:** Bash script (`#!/bin/bash`, executable).
-  **Lines:** 47.
+  **Lines:** 55.
 - **Symbols:** local runner for `.github/workflows/ci.yml`; writes `bench/ci.log` (via `exec > >(tee
   "$LOG") 2>&1`); `set -u`; exports PATH with racket and Lean toolchain dirs and
   `ELIXIR_ERL_OPTIONS="+fnu"`. Zero-Python gate first (same find/grep checks as the CI `zero-py`
@@ -1970,7 +1994,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `visuals/bench-build-times.svg`
 
 - **Language:** SVG (XML vector graphic).
-  **Lines:** 25.
+  **Lines:** 34.
 - **Symbols:** `file` output: `SVG Scalable Vector Graphics image`. Linear-scale horizontal bar
   chart titled `C build times — bench/bench-c.tsv (measured 2026-11-24)`: six bars (vanish-elf
   1.994 s, vanish-load 1.307 s, vanish-link 1.709 s, vanish-vm 2.275 s, ampl-check 0.287 s,
@@ -1983,7 +2007,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `visuals/correspondence.svg`
 
 - **Language:** SVG (XML vector graphic).
-  **Lines:** 29.
+  **Lines:** 38.
 - **Symbols:** `file` output: `SVG Scalable Vector Graphics image`. Same diagram as
   `vanish-lisp/docs/figures/correspondence.svg` except the driver label reads `via
   tests/xslt.exs` (not `via tests/xslt.py`); title `Compiler correspondence — two lowerings, one
@@ -1995,7 +2019,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `visuals/expr-tree-ex2.svg`
 
 - **Language:** SVG (XML vector graphic).
-  **Lines:** 27.
+  **Lines:** 36.
 - **Symbols:** `file` output: `SVG Scalable Vector Graphics image`. Expression tree titled
   `ex2 (- (pow x 4) 1) = x^4 - 1`: nodes SUB, POW, PUSH_SYMBOL x, PUSH_INT 4, PUSH_INT 1.
   Footer: `quarticCert: x^4 - 1 = (x^2 + 1) * (x^2 - 1) + 0`, generator `x^2 - 1`, quotient
@@ -2025,7 +2049,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `visuals/vanish-cycle.svg`
 
 - **Language:** SVG (XML vector graphic).
-  **Lines:** 35.
+  **Lines:** 44.
 - **Symbols:** `file` output: `SVG Scalable Vector Graphics image`. Cycle titled `vanishing
   calculator: VISIBLE / HIDDEN cycle`: states VISIBLE, COMPUTE, HIDDEN, RESTORE; run 1
   `compute and hide`, run 2 `decode and restore`; engine is base64 in `*hidden-payload*`
@@ -2057,7 +2081,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/.gitignore`
 
 - **Language:** gitignore patterns.
-  **Lines:** 4.
+  **Lines:** 12.
 - **Symbols:** 4 lines: `.lake/`, `*.elc`, `lake-manifest.json`, `tests/.pipeline-work/`.
 - **Dependencies:** none.
 - **Responsibility:** Excludes Lean build outputs, compiled Elisp, the Lake manifest, and pipeline
@@ -2118,7 +2142,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/PIPELINE.md`
 
 - **Language:** Markdown (pipeline documentation).
-  **Lines:** 313.
+  **Lines:** 322.
 - **Symbols:** headings `# VANISH-LISP pipeline`; `## The chain`; `## Running the full chain`; `##
   Running each stage`; `## The admission gate`; `## Compiler correspondence (Phase 1)`; `### The
   supported AST, complete`; `### Rule-by-rule correspondence table`; `### What is proved, and what
@@ -2144,7 +2168,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/README.md`
 
 - **Language:** Markdown (project README).
-  **Lines:** 630.
+  **Lines:** 639.
 - **Symbols:** headings `# Licensed under AGPLv3. See LICENSE.`; `# VANISH-LISP — A Proof-Carrying,
   Constraint-Driven, Document-Oriented Lisp Dialect for Symbolic Vanishing Calculus`; `### Emacs
   Lisp · SGML · DSSSL · XSLT · OpenMath · AMPL · POP-11 · Lean 4 · ELF`; `## Contents`; `##
@@ -2163,7 +2187,7 @@ Grand total 15,873 text lines plus 2 PNG images.
   `docs/figures/benchmarks.tsv`); states CI badge slug `AHMADALIPARR/vanish-lisp` and that the
   workflow "has never run" and the repo "has never been pushed"; states the source zip sha256
   `53c5393dc70edf04969c89959fc7d1fab77c0451599f67352d1c120b60f8197a`; badges include a `License:
-  MIT` badge pointing at LICENSE (the LICENSE file itself is AGPLv3 — Section 7.2).
+  AGPLv3` badge pointing at LICENSE.
 - **Dependencies:** none (documentation only; documents Lean 4.12.0, Lake 5.0.0, gcc 13.3.0, Racket
   8.15, Emacs 29.3, Elixir 1.20.5 / OTP 29 with xsltproc).
 - **Responsibility:** Production README for vanish-lisp: one deep section per layer, build/reproduce
@@ -2173,7 +2197,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/STATUS.md`
 
 - **Language:** Markdown (status log).
-  **Lines:** 388.
+  **Lines:** 397.
 - **Symbols:** headings `# VANISH-LISP — Status`; `## Verification, measured on this box
   (2026-11-24)`; `### Lean — header and layout fixed, build still fails at Soundness`; `### Emacs
   Lisp — reduction passes, differential fails`; `### POP-11 — staged, not run`; `## License`; `##
@@ -2189,7 +2213,7 @@ Grand total 15,873 text lines plus 2 PNG images.
   `tests/correspondence.py` — Python helpers, in contrast to PIPELINE.md which names `.exs`
   versions), benchmark measurement log with raw `time` values, and counts (103 tracked files at
   first rewrite; 110 tracked files, 11547 lines at the production rewrite). States `LICENSE` is the
-  MIT License, Copyright (c) 2026 VANISH-LISP Contributors.
+  GNU Affero General Public License v3, Copyright (c) 2026 VANISH-LISP Contributors.
 - **Dependencies:** none (documentation only).
 - **Responsibility:** Dated measured-status log for vanish-lisp: what failed, what was fixed, Phase
   1 correspondence results, and the benchmark measurement log.
@@ -2212,7 +2236,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/docs/figures/admission.svg`
 
 - **Language:** SVG (XML vector graphic).
-  **Lines:** 28.
+  **Lines:** 37.
 - **Symbols:** root `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="400" viewBox="0 0
   880 400">`. Depicts the admission gate: title `Admission gate — Admit(M) = G_grammar ∧ G_semantics
   ∧ G_proof ∧ G_behavior ∧ G_binary`; five boxes (G_grammar: vanish XML validates against the DTD
@@ -2227,7 +2251,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/docs/figures/benchmarks.svg`
 
 - **Language:** SVG (XML vector graphic).
-  **Lines:** 44.
+  **Lines:** 53.
 - **Symbols:** root `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="512" viewBox="0 0
   880 512">`. Log-scale horizontal bar chart titled `Measured wall-clock time, seconds (log scale)`
   with 13 bars: Full pipeline (ADMIT) 211.247 s — ADMIT, 5/5 gates; Correspondence corpus 194.503 s
@@ -2259,7 +2283,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/docs/figures/correspondence.svg`
 
 - **Language:** SVG (XML vector graphic).
-  **Lines:** 29.
+  **Lines:** 38.
 - **Symbols:** root `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="380" viewBox="0 0
   880 380">`. Depicts compiler correspondence: title `Compiler correspondence — two lowerings, one
   instruction stream`; top box `Expression e : Expr (lit, var, add, sub, neg, mul, pow)` branching
@@ -2278,7 +2302,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/docs/figures/pipeline.svg`
 
 - **Language:** SVG (XML vector graphic).
-  **Lines:** 46.
+  **Lines:** 55.
 - **Symbols:** root `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="760" viewBox="0 0
   880 760">`. Depicts the pipeline stages as run by `tests/run_pipeline.sh`: title `VANISH-LISP
   pipeline — stages as run by tests/run_pipeline.sh`; 8 numbered stage boxes: 1. Build C stages
@@ -2299,7 +2323,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/vanishing-calculator/.gitignore`
 
 - **Language:** gitignore patterns.
-  **Lines:** 2.
+  **Lines:** 10.
 - **Symbols:** 2 lines: `*.elc`, `vanishing-calculator/vanishing_calculator_c`.
 - **Dependencies:** none.
 - **Responsibility:** Excludes compiled Elisp and the compiled C calculator binary from version
@@ -2308,7 +2332,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/vanishing-calculator/README.md`
 
 - **Language:** Markdown.
-  **Lines:** 44.
+  **Lines:** 53.
 - **Symbols:** headings `# Vanishing Calculator`; `## Files`; `## Run`; `## Test vectors`; `##
   Status`. Files list: vanishing_calculator.ps1 (PowerShell 7.4.6), .rkt (Racket 8.15), .lisp
   (Common Lisp, SBCL 2.2.9), .p (Poplog / Pop-11, staged, not run here), .c (C core, arena Lisp with
@@ -2333,7 +2357,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/vanishing-calculator/STATUS.md`
 
 - **Language:** Markdown (status log).
-  **Lines:** 94.
+  **Lines:** 103.
 - **Symbols:** headings `# Vanishing Calculator — status`; `## What was supplied, what was
   reconstructed`; `## Per-kernel results`; `## Fixes found by execution, with the measurement`; `##
   Not done`. States last verified 2026-11-24, `python3 verify.py`, 66 checks, 0 failures; runtimes
@@ -2376,7 +2400,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/vanishing-calculator/vanishing_calculator.c`
 
 - **Language:** C (C11 with `strdup`, compiled `-std=gnu11`).
-  **Lines:** 242.
+  **Lines:** 252.
 - **Symbols:** includes stdio, stdlib, string, ctype, stdint. `#define ARENA_CAP 65536`, `#define
   SYM_CAP 4096`. Types: `Tag` enum (T_NIL, T_INT, T_SYM, T_CONS, T_BUILTIN, T_LAMBDA, T_MACRO),
   `Cell` struct (union: ival / sym / pair / fn / closure params+body+env), `Val` = int32_t arena
@@ -2413,7 +2437,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/vanishing-calculator/vanishing_calculator.p`
 
 - **Language:** POP-11 (Poplog).
-  **Lines:** 256.
+  **Lines:** 264.
 - **Symbols:** header comment: Self-Modifying Vanishing Calculator (Poplog / Pop-11), `STATE:
   VISIBLE`, run `pop11 vanishing_calculator.p` or `compile("vanishing_calculator.p");`; "STAGED, NOT
   RUN on this VM: no pop11 runtime here (see STATUS.md). Arithmetic was verified only via a Python
@@ -2434,7 +2458,7 @@ Grand total 15,873 text lines plus 2 PNG images.
 ### `vanish-lisp/vanishing-calculator/vanishing_calculator.ps1`
 
 - **Language:** PowerShell (`#!/usr/bin/env pwsh`, executable).
-  **Lines:** 151.
+  **Lines:** 159.
 - **Symbols:** header `# Self-Modifying Vanishing Calculator (PowerShell)`, `# STATE: VISIBLE`, run
   `pwsh vanishing_calculator.ps1` or `powershell -File vanishing_calculator.ps1`.
   `$ErrorActionPreference = "Stop"`; `$ScriptPath` from `$MyInvocation.MyCommand.Path` (fallback
@@ -3206,8 +3230,9 @@ record.
 | `2619cbd1269e4cfdb397c1c13f3f78e13e917518` | 2026-11-24 | 118 files | `vanishing-calculator: vanish-lisp with Elixir workers, zero Python` — full tree: `vanish-lisp/` (Lean, Racket, Elisp, POP-11, C ELF toolchain, XSLT/OpenMath, Elixir workers, Gherkin, pipeline), `vanishing_calculator.lisp`, `bench/`, `visuals/`, `.github/workflows/ci.yml`, `README.md`, `.gitignore` |
 | `4526cf2dfe4c7c04b3fd32da5fcaf5745e9d01fd` | 2026-11-24 | 118 files | `zero-Python fail-closed gate; lake build before Lean steps so fresh checkouts pass` — adds the zero-Python gate to `run_pipeline.sh`, `verify.sh`, `bench/ci.sh`, and the CI `zero-py` job; adds an early `lake build` step to `run_pipeline.sh` before any Lean-dependent step |
 | `294a93bd96265df22421bd1b7e7cf4bc7e660d5f` | 2026-11-24 | 118 files | `README.md rewritten as a 2,960-line exhaustive technical specification` — six sections plus discrepancies, per-file audit of all 118 files, measured benchmarks, live demo link, corrected badges |
+| `960e11e25286f4aa82a05d515931ec46cfffc149` | 2026-11-24 | 122 files | `README.md: fix non-rendering state diagram, Lisp SVGs + ASCII trees + summary tables` — §1.6 Mermaid state diagram fixed (semicolons in labels broke the parse, verified with the real Mermaid parser); new `visuals/expr-tree-ex2.svg` and `visuals/vanish-cycle.svg`, ASCII S-expression trees, pipeline/run-cycle tables, per-group summary tables; inventory 122 files |
 
-Branch: `main` → `294a93bd96265df22421bd1b7e7cf4bc7e660d5f` (verified via
+Branch: `main` → `960e11e25286f4aa82a05d515931ec46cfffc149` (verified via
 `get-ref` after the push: `refs/heads/main`).
 
 GitHub Actions: run `45520800279`, on commit `2619cbd1`, completed `failure` (2026-11-24). Three
@@ -3224,6 +3249,9 @@ Run `45522744714`, on commit `4526cf2d`, completed `success` (2026-11-24). All 5
 Run `45523389030`, on commit `294a93bd`, completed `success` (2026-11-24). All 5 jobs passed
 (`zero-py`, `verify`, `c-builds`, `calculators`, `pipeline`). The workflow has 5 jobs and the
 pipeline job expects ADMIT.
+
+Run `45543272782`, on commit `960e11e2`, completed `success` (2026-11-24). All 5 jobs passed
+(`zero-py`, `verify`, `c-builds`, `calculators`, `pipeline`).
 
 Prior history: an earlier repository under the names `monorepo` / `vanishing-calculator` (seed
 commit `576f929e`, full-tree commit `31b9d656`, fix commit `72831c0e`) was deleted by the repository
@@ -3260,10 +3288,25 @@ vs 1.053 s; C builds 7.144 s vs 4.489 s. It also references `visuals/benchmarks.
 `LICENSE_HEADER.txt` and the first line of `vanish-lisp/README.md` ("Licensed under AGPLv3") state
 AGPLv3.
 
-But that README carries a `License: MIT` badge pointing at LICENSE, and `vanish-lisp/STATUS.md`
-("License" section) states the LICENSE is the MIT License, Copyright (c) 2026 VANISH-LISP
-Contributors. The license file controls: the tree is licensed under AGPLv3; the MIT badge and the
-STATUS.md license statement are wrong.
+The shipped upstream files carried three MIT references that contradicted AGPLv3-only: that
+README's `License: MIT` badge (line 9), its "Provenance and licensing" section stating the
+repository includes an MIT license, and `vanish-lisp/STATUS.md` ("License" section), which stated
+the LICENSE is the MIT License, Copyright (c) 2026 VANISH-LISP Contributors. All three are now
+corrected to AGPLv3 in this tree. Twelve upstream source files also carried
+`SPDX-License-Identifier: MIT` headers (five Elisp, six POP-11, one POP-11 test file); those
+identifiers are now `SPDX-License-Identifier: AGPL-3.0-or-later`.
+
+A root `LICENSE` file was added as a byte-for-byte copy of `vanish-lisp/LICENSE` (661 lines) so
+GitHub detects AGPLv3, and the `LICENSE_HEADER.txt` text was applied as a header comment to every
+file in the tree except the pinned and skipped files listed below. The original zip never applied
+the header text to any file; nothing was stripped — the headers were simply never added until now.
+
+Not headered, by design: the two `vanishing_calculator.lisp` copies (byte-pinned: the standalone
+file's sha256 `d8ed5d66…` is recorded in this README and verified byte-identical by the live demo);
+the four certificate XMLs (recorded hashes, single-line files); data files with no safe comment
+syntax (`TEST_LOG.txt` ×2, `MANIFEST.sha256`, `MANIFEST.zip.sha256`, `bench/bench-c.tsv`,
+`docs/figures/benchmarks.tsv`, `lean-toolchain`); the two PNG binaries; and `LICENSE` and
+`LICENSE_HEADER.txt` themselves, which are the license.
 
 ## 7.3 Stale MANIFEST.sha256
 

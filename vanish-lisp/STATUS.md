@@ -1,3 +1,12 @@
+<!--
+VANISH-LISP — Copyright (c) 2026 VANISH-LISP Contributors
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+See the LICENSE file for the full text.
+-->
 # VANISH-LISP — Status
 
 Source: `vanish-lisp.zip`, sha256
@@ -60,7 +69,7 @@ loads `../../pop11/vanish.p`, so the load path matters when run.
 
 ## License
 
-`LICENSE` is the MIT License, Copyright (c) 2026 VANISH-LISP
+`LICENSE` is the GNU Affero General Public License v3, Copyright (c) 2026 VANISH-LISP
 Contributors. No personal name appears in it.
 
 ## Combined repo (2026-11-24)

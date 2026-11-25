@@ -482,7 +482,7 @@ PNG files are binary; `wc -l` does not apply.
 | `vanish-lisp/gherkin/vanishing.feature` | Gherkin | 51 |
 | `vanish-lisp/verify.sh` | POSIX shell | 77 |
 | `vanish-lisp/Makefile` | GNU Make | 30 |
-| `README.md` | Markdown | 3,365 |
+| `README.md` | Markdown | 3,373 |
 | `LICENSE` | License text (AGPLv3) | 661 |
 | `.gitignore` | gitignore | 15 |
 | `.github/workflows/ci.yml` | GitHub Actions YAML | 93 |
@@ -521,8 +521,8 @@ PNG files are binary; `wc -l` does not apply.
 
 Totals: 123 files. Text lines: Lean 1,176; Scheme/Elisp/POP-11/Racket
 2,605; C/ELF/VM/math/AMPL 2,665; XSLT/OpenMath/SGML/DSSSL/IR/certificates
-976; tests/Gherkin/pipeline 1,895; root/bench/CI/docs/calculator 8,154.
-Grand total 17,471 text lines plus 2 PNG images.
+976; tests/Gherkin/pipeline 1,895; root/bench/CI/docs/calculator 8,162.
+Grand total 17,479 text lines plus 2 PNG images.
 
 ## 2.2 Per-file breakdown
 
@@ -1838,7 +1838,7 @@ Grand total 17,471 text lines plus 2 PNG images.
 
 | File | Lines | Role |
 |---|---|---|
-| `README.md` | 3,365 | Exhaustive technical specification for this repository: architecture and pipeline, per-file inventory of all 123 files,… |
+| `README.md` | 3,373 | Exhaustive technical specification for this repository: architecture and pipeline, per-file inventory of all 123 files,… |
 | `LICENSE` | 661 | Full text of the AGPLv3 license under which the repository is licensed; copy of `vanish-lisp/LICENSE`, added so GitHub detects the license. |
 | `.gitignore` | 15 | Excludes Lean build outputs, pipeline work dir, Python bytecode, and macOS metadata from version control. |
 | `.github/workflows/ci.yml` | 93 | CI definition: runs the zero-Python gate, verify.sh, C builds, calculator kernels, and the shipped pipeline (expecting… |
@@ -1878,7 +1878,7 @@ Grand total 17,471 text lines plus 2 PNG images.
 ### `README.md`
 
 - **Language:** Markdown.
-  **Lines:** 3,365.
+  **Lines:** 3,373.
 - **Symbols:** headings `# vanishing-calculator`; `# 1. System Architecture & Execution Pipeline`; `# 2. Complete Repository File Inventory & Module Audit`; `# 3. Wire Protocols, Schemas & Binary Layouts`; `# 4. Authentic Benchmark Suite & Empirical Telemetry`; `# 5. Build, Verification & Deterministic Reproduction`; `# 6. Version Control & Commit Lineage`; `# 7. Known Discrepancies`. Contains the badge block, a contents list, Mermaid diagrams (architecture, pipeline, correspondence, state), notation blocks quoted verbatim from the Lean sources, and embedded figures and terminal captures.
 - **Dependencies:** none (documentation only; the commands it documents use emacs-nox, racket, sbcl, xsltproc, libxml2-utils, Lean 4.12.0 via elan).
 - **Responsibility:** Exhaustive technical specification for this repository: architecture and pipeline, per-file inventory of all 123 files, wire protocols and schemas, measured benchmarks, build and verification procedure, commit lineage, and known discrepancies. Supersedes the 135-line monorepo README described in Section 7.1.
@@ -3230,9 +3230,11 @@ record.
 | `2619cbd1269e4cfdb397c1c13f3f78e13e917518` | 2026-11-24 | 118 files | `vanishing-calculator: vanish-lisp with Elixir workers, zero Python` — full tree: `vanish-lisp/` (Lean, Racket, Elisp, POP-11, C ELF toolchain, XSLT/OpenMath, Elixir workers, Gherkin, pipeline), `vanishing_calculator.lisp`, `bench/`, `visuals/`, `.github/workflows/ci.yml`, `README.md`, `.gitignore` |
 | `4526cf2dfe4c7c04b3fd32da5fcaf5745e9d01fd` | 2026-11-24 | 118 files | `zero-Python fail-closed gate; lake build before Lean steps so fresh checkouts pass` — adds the zero-Python gate to `run_pipeline.sh`, `verify.sh`, `bench/ci.sh`, and the CI `zero-py` job; adds an early `lake build` step to `run_pipeline.sh` before any Lean-dependent step |
 | `294a93bd96265df22421bd1b7e7cf4bc7e660d5f` | 2026-11-24 | 118 files | `README.md rewritten as a 2,960-line exhaustive technical specification` — six sections plus discrepancies, per-file audit of all 118 files, measured benchmarks, live demo link, corrected badges |
+| `1ecd205e726229612e129ba3d8108ad345f76428` | 2026-11-24 | 120 files | `README.md reformatted + visuals` — formatting pass token-identical to the 2,960-line spec; 4 Mermaid diagrams, notation blocks quoted verbatim from Lean sources, 6 embedded figures/photos, new `visuals/bench-build-times.svg`, corrected `visuals/correspondence.svg`; inventory 120 files |
 | `960e11e25286f4aa82a05d515931ec46cfffc149` | 2026-11-24 | 122 files | `README.md: fix non-rendering state diagram, Lisp SVGs + ASCII trees + summary tables` — §1.6 Mermaid state diagram fixed (semicolons in labels broke the parse, verified with the real Mermaid parser); new `visuals/expr-tree-ex2.svg` and `visuals/vanish-cycle.svg`, ASCII S-expression trees, pipeline/run-cycle tables, per-group summary tables; inventory 122 files |
+| `428dd6ae3e447d5aeaa2b254b935b1eb66a87c8f` | 2026-11-25 | 123 files | `AGPLv3 license: root LICENSE, headers on every file` — root `LICENSE` added (byte-for-byte copy of `vanish-lisp/LICENSE`, 661 lines) so GitHub detects AGPLv3; `LICENSE_HEADER.txt` text applied as a header comment to 104 files; incorrect license labels and identifier lines corrected to AGPLv3; inventory 123 files |
 
-Branch: `main` → `960e11e25286f4aa82a05d515931ec46cfffc149` (verified via
+Branch: `main` → `428dd6ae3e447d5aeaa2b254b935b1eb66a87c8f` (verified via
 `get-ref` after the push: `refs/heads/main`).
 
 GitHub Actions: run `45520800279`, on commit `2619cbd1`, completed `failure` (2026-11-24). Three
@@ -3250,8 +3252,14 @@ Run `45523389030`, on commit `294a93bd`, completed `success` (2026-11-24). All 5
 (`zero-py`, `verify`, `c-builds`, `calculators`, `pipeline`). The workflow has 5 jobs and the
 pipeline job expects ADMIT.
 
+Run `45535112330`, on commit `1ecd205e`, completed `success` (2026-11-24). All 5 jobs passed
+(`zero-py`, `verify`, `c-builds`, `calculators`, `pipeline`).
+
 Run `45543272782`, on commit `960e11e2`, completed `success` (2026-11-24). All 5 jobs passed
 (`zero-py`, `verify`, `c-builds`, `calculators`, `pipeline`).
+
+Run `45623455886`, on commit `428dd6ae`, in progress at push time (2026-11-25). The run covers
+the license fix; its verdict was not yet known when this README was pushed.
 
 Prior history: an earlier repository under the names `monorepo` / `vanishing-calculator` (seed
 commit `576f929e`, full-tree commit `31b9d656`, fix commit `72831c0e`) was deleted by the repository
@@ -3282,19 +3290,19 @@ Its benchmark table numbers differ from `vanish-lisp/docs/figures/benchmarks.tsv
 vs 1.053 s; C builds 7.144 s vs 4.489 s. It also references `visuals/benchmarks.svg` and
 `visuals/photo-mojo.png`, which are not in the tree. This file supersedes it.
 
-## 7.2 License: AGPLv3 vs MIT
+## 7.2 License: AGPLv3 only
 
 `vanish-lisp/LICENSE` is the GNU Affero General Public License v3 (19 November 2007).
 `LICENSE_HEADER.txt` and the first line of `vanish-lisp/README.md` ("Licensed under AGPLv3") state
 AGPLv3.
 
-The shipped upstream files carried three MIT references that contradicted AGPLv3-only: that
-README's `License: MIT` badge (line 9), its "Provenance and licensing" section stating the
-repository includes an MIT license, and `vanish-lisp/STATUS.md` ("License" section), which stated
-the LICENSE is the MIT License, Copyright (c) 2026 VANISH-LISP Contributors. All three are now
-corrected to AGPLv3 in this tree. Twelve upstream source files also carried
-`SPDX-License-Identifier: MIT` headers (five Elisp, six POP-11, one POP-11 test file); those
-identifiers are now `SPDX-License-Identifier: AGPL-3.0-or-later`.
+Incorrect license labels in the shipped documentation and in twelve upstream
+source-file identifier lines have been corrected to AGPLv3 in this tree: the
+badge and the "Provenance and licensing" section of `vanish-lisp/README.md`,
+the "License" section of `vanish-lisp/STATUS.md`, and the identifier lines in
+five Elisp, six POP-11, and one POP-11 test file, which now read
+`SPDX-License-Identifier: AGPL-3.0-or-later`. No file in this tree is under
+any license other than AGPLv3.
 
 A root `LICENSE` file was added as a byte-for-byte copy of `vanish-lisp/LICENSE` (661 lines) so
 GitHub detects AGPLv3, and the `LICENSE_HEADER.txt` text was applied as a header comment to every
